@@ -13,11 +13,6 @@ Welcome to my personal portfolio! This website showcases my most important codin
 
 <br />
 
-<a href="https://github.com/Shivamkak19/SKSTUDIO-Portfolio/images">View Product</a>
-·
-<a href="https://github.com/Shivamkak19/SKSTUDIO-Portfolio/issues">Report Bug</a>
-·
-<a href="https://github.com/Shivamkak19/SKSTUDIO-Portfolio/issues">Request Feature</a>
 </div>
 
 
