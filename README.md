@@ -24,16 +24,14 @@ Welcome to my personal portfolio! This website showcases my most important codin
 <!-- ABOUT THE PROJECT -->
 ## About the Project
 
-Live Links:
-
-* [skstud.io](https://skstud.io)
-* [skstudio.vercel.app](https://skstudio.vercel.app)
-
 [![Product][product1]](https://skstud.io)
 
-This portfolio website is based on the open source React Three Fiber components and templates developed by Pmndrs/drei. Available here: [https://github.com/pmndrs/drei](https://github.com/pmndrs/drei) 
+Live Links:
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+[skstud.io](https://skstud.io)
+[skstudio.vercel.app](https://skstudio.vercel.app)
+
+This portfolio website is based on the open source React Three Fiber components and templates developed by Pmndrs/drei. Available here: [https://github.com/pmndrs/drei](https://github.com/pmndrs/drei) 
 
 ### Built With
 
@@ -42,8 +40,6 @@ This portfolio website is based on the open source React Three Fiber components 
 * [![GSAP][greensock]][greensock-url]
 * [![Vite.js][vite]][vite-url]
 * [![Blender][blender]][blender-url]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- GETTING STARTED -->
@@ -89,8 +85,6 @@ To run this project, you must download the latest version of the npm package man
    npm run preview
    ```
    
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- ROADMAP -->
 ## Roadmap
 
@@ -101,9 +95,6 @@ To run this project, you must download the latest version of the npm package man
     - [ ] Set animation mixer for polar bear animations
 - [ ] Design scroll experience with GSAP scroll trigger plug in
 
-See the [open issues](https://github.com/Shivamkak19/SKSTUDIO-Portfolio/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- LICENSE -->
@@ -111,28 +102,26 @@ See the [open issues](https://github.com/Shivamkak19/SKSTUDIO-Portfolio/issues) 
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- CONTACT -->
 ## Contact
 
-* Shivam Kak: [Email](sk3686@princeton.edu) [linkedIn](https://linkedin.com/in/shivamkak)
-* Project Link: [https://github.com/Shivamkak19/SKSTUDIO-Portfolio](https://github.com/Shivamkak19/SKSTUDIO-Portfolio)
+* Shivam Kak: 
+    * [Email](sk3686@princeton.edu) 
+    * [linkedIn](https://linkedin.com/in/shivamkak)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+* Project Link: [https://github.com/Shivamkak19/SKSTUDIO-Portfolio](https://github.com/Shivamkak19/SKSTUDIO-Portfolio)
 
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []() Pmndrs/drei, for a really cool template with preset ground reflections and video textures for text!
-* []() Bruno Simon, for the Three JS Journey course, which is a great instructional resource for learning three.js and React Three Fiber
+* []() [Pmndrs/drei](https://pmnd.rs/), for a really cool template with preset ground reflections and video textures for text!
+* []() Bruno Simon, for the  [Three-JS Journey](https://threejs-journey.com/) course, which is a great instructional resource for learning three.js and React Three Fiber
+
 
 <br />
  "Polar Bear" model by Bjarne Stokhof can be found at https://sketchfab.com/3d-models/polar-bear-04dbccf27a694c8a82e5330f3056022f
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
