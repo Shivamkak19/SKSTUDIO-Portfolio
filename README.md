@@ -3,11 +3,12 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
+
+<h3 align="center">SKSTUDIO Portfolio Website</h3>
+
   <a href="https://github.com/Shivamkak19/SKSTUDIO-Portfolio">
     <img src="public/product1.png" alt="Logo">
   </a>
-
-<h3 align="center">Website Description</h3>
 
 Welcome to my personal portfolio! This website showcases my most important coding projects, all of which are also available here on my Github page. 
 
@@ -23,8 +24,8 @@ Welcome to my personal portfolio! This website showcases my most important codin
 
 Live Links:
 
-[skstud.io](https://skstudio.vercel.app)
-[skstudio.vercel.app](https://skstudio.vercel.app)
+* [skstud.io](https://skstud.io)
+* [skstudio.vercel.app](https://skstudio.vercel.app)
 
 This portfolio website is based on the open source React Three Fiber components and templates developed by Pmndrs/drei. Available here: [https://github.com/pmndrs/drei](https://github.com/pmndrs/drei) 
 
