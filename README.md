@@ -4,12 +4,14 @@
 <br />
 <div align="center">
 
-<h3 align="center">SKSTUDIO Portfolio Website</h3>
 
   <a href="https://github.com/Shivamkak19/SKSTUDIO-Portfolio">
     <img src="public/product1.png" alt="Logo">
   </a>
 
+<br />
+
+<h3 align="center">SKSTUDIO Portfolio Website</h3>
 Welcome to my personal portfolio! This website showcases my most important coding projects, all of which are also available here on my Github page. 
 
 <br />
