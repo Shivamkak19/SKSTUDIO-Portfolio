@@ -31,7 +31,7 @@ Live Links:
 
 This portfolio website is based on the open source React Three Fiber components and templates developed by Pmndrs/drei. Available here: [https://github.com/pmndrs/drei](https://github.com/pmndrs/drei) 
 
-### Built With
+### Libraries/Frameworks
 
 * [![react][react]][react-url]
 * [![pmndrs-r3f][pmndrs-r3f]][pmndrs-r3f-url]
