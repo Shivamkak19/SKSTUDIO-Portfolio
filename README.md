@@ -19,7 +19,7 @@ Welcome to my personal portfolio! This website showcases my most important codin
 <!-- ABOUT THE PROJECT -->
 ## About the Project
 
-[![Product][product1]](https://skstud.io)
+<!-- [![Product][product1]](https://skstud.io) -->
 
 Live Links:
 
@@ -31,9 +31,9 @@ This portfolio website is based on the open source React Three Fiber components 
 ### Built With
 
 * [![react][react]][react-url]
-* [![threedotjs][threedotjs]][threedotjs-url]
 * [![pmndrs-r3f][pmndrs-r3f]][pmndrs-r3f-url]
 * [![pmndrs-drei][pmndrs-drei]][pmndrs-drei-url]
+* [![threedotjs][threedotjs]][threedotjs-url]
 * [![GSAP][greensock]][greensock-url]
 * [![Vite.js][vite]][vite-url]
 * [![Blender][blender]][blender-url]
