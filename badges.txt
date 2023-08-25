@@ -1,0 +1,29 @@
+<!-- BLANK -->
+<a href=""><img className="badgeLogo" src="" /></a>
+
+<!-- Chrome -->
+<a href="https://developer.chrome.com/docs/extensions/"><img className="badgeLogo" src="https://img.shields.io/badge/Chrome-API-00427e?style=for-the-badge&logo=googlechrome&logoColor=61DAFB" /></a>
+
+<!-- Spotify -->
+<a href="https://developer.spotify.com/documentation/web-api"><img className="badgeLogo" src="https://img.shields.io/badge/spotify-api-333333?style=for-the-badge&logo=spotify&logoColor=spotify&labelColor=000000" /></a>
+
+<!-- HTML -->
+<a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"><img className="badgeLogo" src="https://img.shields.io/badge/HTML5-dc4a25?style=for-the-badge&logo=html5&logoColor=ffffff" /></a>
+
+<!-- CSS -->
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img className="badgeLogo" src="https://img.shields.io/badge/CSS3-2862ea?style=for-the-badge&logo=css3&logoColor=ffffff" /></a>
+
+<!-- JS -->
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img className="badgeLogo" src="https://img.shields.io/badge/JS-000000?style=for-the-badge&logo=javascript&logoColor=efd81c" /></a>
+
+<!-- JSON -->
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON"><img className="badgeLogo" src="https://img.shields.io/badge/JSON-919191?style=for-the-badge&logo=json&logoColor=333333" /></a>
+
+<!-- Tonejs -->
+<a href="https://tonejs.github.io/"><img className="badgeLogo" src="https://tinyurl.com/nhzmp7wt" /></a>
+
+
+
+
+
+

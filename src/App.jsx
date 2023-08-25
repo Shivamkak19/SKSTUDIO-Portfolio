@@ -1,13 +1,14 @@
 import * as THREE from 'three'
 import React, { Suspense, useEffect, useState } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { Reflector, Text, useTexture, useGLTF, Html, Float} from '@react-three/drei'
+import { PresentationControls, Reflector, Text, useTexture, useGLTF, Html, Float} from '@react-three/drei'
 
 import ReactMarkdown from 'react-markdown';
 import { useCursor, MeshReflectorMaterial} from '@react-three/drei'
 
 // Loads All other components into main app for export
 export default function App() {
+  
 
   // Model transformation parameters
   const rotation = [0, Math.PI - 0.4, 0];
@@ -87,20 +88,95 @@ function setText() {
       position={ [-2, 1.2, 0] }
       rotation-x={ 0 }
       rotation-y={ Math.PI / 5}
-      scale= { [ 0.5, 0.5, 0.5 ] }
+      scale= { [ 0.1, 0.1, 0.1 ] }
   >
-    <div className='planeText'>
-    Yooo what up this is html itself
-    {/* <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="106" height="28" role="img" aria-label="THREE.JS"><title>THREE.JS</title><g shape-rendering="crispEdges"><rect width="106" height="28" fill="#6592e6"/></g><g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="100"><image x="9" y="7" width="14" height="14" xlink:href="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMDAwMDAwIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+VGhyZWUuanM8L3RpdGxlPjxwYXRoIGQ9Ik0uMzggMGEuMjY4LjI2OCAwIDAgMC0uMjU2LjMzMmwyLjg5NCAxMS43MTZhLjI2OC4yNjggMCAwIDAgLjAxLjA0bDIuODkgMTEuNzA4YS4yNjguMjY4IDAgMCAwIC40NDcuMTI4TDIzLjgwMiA3LjE1YS4yNjguMjY4IDAgMCAwLS4xMTItLjQ1bC01Ljc4NC0xLjY2N2EuMjY4LjI2OCAwIDAgMC0uMTIzLS4wMzVMNi4zOCAxLjcxNWEuMjY4LjI2OCAwIDAgMC0uMTQ0LS4wNEwuNDU2LjAxQS4yNjguMjY4IDAgMCAwIC4zOCAwem0uMzc0LjY1NEw1LjcxIDIuMDggMS45OSA1LjY2NHpNNi42MSAyLjM0bDQuODY0IDEuNC0zLjY1IDMuNTE1em0tLjUyMi4xMmwxLjIxNyA0LjkyNi00Ljg3Ny0xLjR6bTYuMjggMS41MzhsNC44NzggMS40MDQtMy42NjIgMy41M3ptLS41Mi4xM2wxLjIwOCA0LjktNC44NTMtMS4zOTJ6bTYuMyAxLjUzNGw0Ljk0NyAxLjQyNC0zLjcxNSAzLjU3NHptLS41MjQuMTJsMS4yMTUgNC45MjYtNC44NzYtMS4zOTh6bS0xNS40MzIuNjk2bDQuOTY0IDEuNDI0LTMuNzI2IDMuNTg2ek04LjA0NyA4LjE1bDQuODc3IDEuNC0zLjY2IDMuNTI3em0tLjUxOC4xMzdsMS4yMzYgNS4wMTctNC45NjMtMS40MzJ6bTYuMjc0IDEuNTM1bDQuOTY1IDEuNDI1LTMuNzMgMy41ODZ6bS0uNTIuMTI3bDEuMjM1IDUuMDEyLTQuOTU4LTEuNDN6bS05LjYzIDIuNDM4bDQuODczIDEuNDA2LTMuNjU2IDMuNTIzem01Ljg1NCAxLjY4N2w0Ljg2MyAxLjQwMy0zLjY0OCAzLjUxem0tLjU0LjA0bDEuMjE0IDQuOTI3LTQuODc1LTEuNHptLTMuODk2IDQuMDJsNS4wMzcgMS40NDItMy43ODIgMy42Mzh6Ii8+PC9zdmc+"/><text transform="scale(.1)" x="630" y="175" textLength="620" fill="#fff" font-weight="bold">THREE.JS</text></g></svg> */}
-    <img src="/test2343.png" alt="" />
-    </div>
+        <div className='planeText'>
 
-    <div>
-        <ReactMarkdown>
-          What up now
+            {/* Top of plane text section */}
+            <div className="head">
+                {/* Chrome */}
+                <a href="https://developer.chrome.com/docs/extensions/"><img className="badgeLogo" src="https://img.shields.io/badge/Chrome-API-00427e?style=for-the-badge&logo=googlechrome&logoColor=61DAFB" /></a>
 
-        </ReactMarkdown>
-    </div>
+                {/* Spotify */}
+                <a href="https://developer.spotify.com/documentation/web-api"><img className="badgeLogo" src="https://img.shields.io/badge/spotify-api-333333?style=for-the-badge&logo=spotify&logoColor=spotify&labelColor=000000" /></a>
+
+                {/* HTML */}
+                <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"><img className="badgeLogo" src="https://img.shields.io/badge/HTML5-dc4a25?style=for-the-badge&logo=html5&logoColor=ffffff" /></a>
+
+                {/* CSS */}
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img className="badgeLogo" src="https://img.shields.io/badge/CSS3-2862ea?style=for-the-badge&logo=css3&logoColor=ffffff" /></a>
+
+                {/* JS */}
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img className="badgeLogo" src="https://img.shields.io/badge/JS-000000?style=for-the-badge&logo=javascript&logoColor=efd81c" /></a>
+
+                {/* JSON */}
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON"><img className="badgeLogo" src="https://img.shields.io/badge/JSON-919191?style=for-the-badge&logo=json&logoColor=333333" /></a>
+
+                {/* Tonejs */}
+                <a href="https://tonejs.github.io/"><img className="badgeLogo" src="https://tinyurl.com/nhzmp7wt" /></a>
+            </div>
+
+            {/* Main body content */}
+            <div className="body">
+
+                <div className="github-section">
+                  <div className="githubText">
+                    <p>View on GitHub</p>
+                  </div>
+                  <div className="githublogo">
+                    <a href="https://github.com/Shivamkak19/Spotify-BPMBuddy">
+                      <img src="/github.png" className="socialLogo projectGithubLogo" alt="Github Logo"></img>
+                    </a>
+                  </div>
+                </div>
+
+                <img className="projectLogo" src="/projects/logo-main.png" alt="" />
+                <div className="body-sections">
+
+                    <div className="body-text1">
+                    The Spotify BPM Buddy Chrome Extension is the perfect tool to bring
+                     your jam sessions and music practice sessions to the next level. 
+                     The extension allows users to adjust the tempo of their Spotify player 
+                     to a desired input tempo (non-commercial use only).                     
+                    </div>
+
+                    <div className="body-text2">
+                    Upon visiting https://open.spotify.com/, users will 
+                    automatically be redirected to authorize usage with their 
+                    Spotify account. Product After reaching the Spotify web player, 
+                    they will be able to access the Spotify BPMBuddy as an icon in the 
+                    footer containing the Spotify player. 
+                    </div>
+                </div>
+
+            </div>
+
+            {/* Plane Footer content */}
+            <div className="tail">
+
+            </div>
+        </div>
+
+
+    </Html>
+  )
+}
+
+function setLabel(){
+  return(
+    <Html
+    transform
+    wrapperClass="htmlScreen"
+    distanceFactor={ 0 }
+    position={ [-2, 0.1, 0.5] }
+    rotation-x={ 0 }
+    rotation-y={ Math.PI / 5}
+    scale= { [ 0.1, 0.1, 0.1 ] }
+    >
+
+        <div className="label-text">
+            Hold to Drag.              
+        </div>
 
     </Html>
   )
@@ -109,7 +185,24 @@ function setText() {
 // Generate Plane Meshes
 function setPlane(){
 
+
   return(
+    <>
+    <PresentationControls
+      // Set attributes of presentation controls
+      // global
+
+      // About SKSTUDIO axis
+      polar={[-0, 0.1]}
+
+      // About axis vertical through cube
+      azimuth={[-0.8, 0]}
+
+      // Set attributes for spring library
+      config={ {mass: 2, tension: 400} }
+      snap={ {mass: 4, tension: 400} }
+    >
+
       <Float rotationIntensity={ 0.4 } >  
         <group>
           <mesh rotation={[0, Math.PI / 5, 0]} position = {[-2, 1.2, 0]}>
@@ -119,9 +212,18 @@ function setPlane(){
                 emissive={0x3812BD}
                 emissiveIntensity={1}
                 color={0x000000}
-                opacity={0.9}
+                opacity={0.3}
                 transparent
               />
+
+              {/* <MeshReflectorMaterial
+                color="#3812BD"
+                metalness={0.4}
+                normalScale={[2, 2]}
+                opacity={0.3}
+              /> */}
+
+
           </mesh>
 
           <mesh rotation={[0, Math.PI / 5, 0]} position = {[-2, 0.1, 0]}>
@@ -143,9 +245,13 @@ function setPlane(){
           </mesh>
 
           {setText()}
+          {setLabel()}
           
         </group>
       </Float>
+    </PresentationControls>
+    </>
+
   )
 }
 
