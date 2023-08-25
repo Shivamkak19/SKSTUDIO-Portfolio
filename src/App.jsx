@@ -140,7 +140,6 @@ function setPlane(){
                 opacity={0.9}
                 transparent
               />
-          <img src="../public/test2343.png" alt="" />
           </mesh>
 
           {setText()}
