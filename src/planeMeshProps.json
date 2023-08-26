@@ -1,0 +1,162 @@
+{
+    "plane1": {
+        "title": "Plane Orientation - Left",
+        "notes": "rotation-y is PI / 5; ",
+        "scale_master": [1, 1, 1],
+        "azimuth": [-0.8, 0.6],
+        "rotationIntensity": 0.4,
+
+        "plane_rotation": [0, 0.62831853071, 0],
+        "plane_position": [-2, 1.2, 0],
+
+        "box_rotation": [0,  0.62831853071, 0],
+        "box_position": [-2, 0.1, 0],
+
+        "label_rotation": [0,  0.62831853071, 0],
+        "label_position": [-2, 0.1, 0.5],
+
+        "plane_color": "#3812BD",
+        "box_color": "#ffffff"
+        },
+
+    "plane2": {
+        "title": "Plane Orientation - Right",
+        "notes": "rotation-y is PI / 5; ",
+        "scale_master": [1, 1, 1],
+        "azimuth": [-0.6, 0.8],
+        "rotationIntensity": 0.4,
+
+        "plane_rotation": [0, -0.62831853071, 0],
+        "plane_position": [2, 1.2, 0],
+
+        "box_rotation": [0,  -0.62831853071, 0],
+        "box_position": [2, 0.1, 0],
+
+        "label_rotation": [0,  -0.62831853071, 0],
+        "label_position": [1.7, 0.1, 0.25],
+
+        "plane_color": "#3812BD",
+        "box_color": "#ffffff"
+        },
+
+    "ring1": {
+        "title": "Ring Plane Mesh 1",
+        "notes": "rotation-y is PI / 3; ",
+        "scale_master": [0.6, 0.6, 0.6],
+        "azimuth": [-0.6, 0.8],
+        "rotationIntensity": 0.1,
+
+        "plane_rotation": [0, 1.308996939, 0],
+        "plane_position": [-5, 1.2, 0.5],
+
+        "box_rotation": [0,  1.308996939, 0],
+        "box_position": [-5, 0.1, 0.5],
+
+        "label_rotation": [0,  1.308996939, 0],
+        "label_position": [-5, 0.1, 1],
+
+        "plane_color": "#3812BD",
+        "box_color": "#ffffff"
+        },
+
+    "ring2": {
+        "title": "Ring Plane Mesh 2",
+        "notes": "rotation-y is 2 PI / 9; ",
+        "scale_master": [0.6, 0.6, 0.6],
+        "azimuth": [-0.6, 0.8],
+        "rotationIntensity": 0.1,
+
+        "plane_rotation": [0, 0.52359877559, 0],
+        "plane_position": [-3, 1.2, -1.5],
+
+        "box_rotation": [0,  0.52359877559, 0],
+        "box_position": [-3, 0.1, -1.5],
+
+        "label_rotation": [0,  0.52359877559, 0],
+        "label_position": [-3.2, 0.1, -1.25],
+
+        "plane_color": "#3812BD",
+        "box_color": "#ffffff"
+        },
+
+    "ring3": {
+        "title": "Ring Plane Mesh 3",
+        "notes": "rotation-y is PI / 9; ",
+        "scale_master": [0.6, 0.6, 0.6],
+        "azimuth": [-0.6, 0.8],
+        "rotationIntensity": 0.1,
+
+        "plane_rotation": [0, 0, 0],
+        "plane_position": [0, 1.2, -2.5],
+
+        "box_rotation": [0,  0, 0],
+        "box_position": [0, 0.1, -2.5],
+
+        "label_rotation": [0,  0, 0],
+        "label_position": [-0.3, 0.1, -2.25],
+
+        "plane_color": "#3812BD",
+        "box_color": "#ffffff"
+        },
+
+    "ring4": {
+        "title": "Ring Plane Mesh 4",
+        "notes": "rotation-y is - PI / 9; ",
+        "scale_master": [0.6, 0.6, 0.6],
+        "azimuth": [-0.6, 0.8],
+        "rotationIntensity": 0.1,
+
+        "plane_rotation": [0, -0.52359877559, 0],
+        "plane_position": [3, 1.2, -1.5],
+
+        "box_rotation": [0,  -0.52359877559, 0],
+        "box_position": [3, 0.1, -1.5],
+
+        "label_rotation": [0,  -0.52359877559, 0],
+        "label_position": [3, 0.1, -1.25],
+
+        "plane_color": "#3812BD",
+        "box_color": "#ffffff"
+        },
+
+    "ring5": {
+        "title": "Ring Plane Mesh 5",
+        "notes": "rotation-y is - 2 PI / 9; ",
+        "scale_master": [0.6, 0.6, 0.6],
+        "azimuth": [-0.6, 0.8],
+        "rotationIntensity": 0.1,
+
+        "plane_rotation": [0, -1.308996939, 0],
+        "plane_position": [5, 1.2, 0.5],
+
+        "box_rotation": [0,  -1.308996939, 0],
+        "box_position": [5, 0.1, 0.5],
+
+        "label_rotation": [0,  -1.308996939, 0],
+        "label_position": [5, 0.1, 1],
+
+        "plane_color": "#3812BD",
+        "box_color": "#ffffff"
+        },
+
+    "ring6": {
+        "title": "Ring Plane Mesh 6",
+        "notes": "rotation-y is - PI / 3; ",
+        "scale_master": [0.6, 0.6, 0.6],
+        "azimuth": [-0.6, 0.8],
+        "rotationIntensity": 0.1,
+
+        "plane_rotation": [0, -1.0471975512, 0],
+        "plane_position": [2, 1.2, 0],
+
+        "box_rotation": [0,  -1.0471975512, 0],
+        "box_position": [2, 0.1, 0],
+
+        "label_rotation": [0,  -1.0471975512, 0],
+        "label_position": [1.7, 0.1, 0.25],
+
+        "plane_color": "#3812BD",
+        "box_color": "#ffffff"
+        }
+
+  }

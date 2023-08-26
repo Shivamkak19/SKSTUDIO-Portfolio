@@ -1,0 +1,39 @@
+// // function GlowMaterial(color, intensity) {
+// //   return (
+// //     <meshPhongMaterial
+// //       emissive={color}
+// //       emissiveIntensity={intensity}
+// //       color={0xffffff}
+// //       opacity={0.9}
+// //       transparent
+// //     />
+// //   );
+// // }
+
+// // function MyScene() {
+// //   const [hovered, setHovered] = useState(false);
+// //   const meshRef = useRef();
+
+// //   useFrame(() => {
+// //     meshRef.current.rotation.x += 0.01;
+// //     meshRef.current.rotation.y += 0.01;
+// //   });
+
+// //   return (
+// //       <mesh
+// //         ref={meshRef}
+// //         onPointerOver={() => setHovered(true)}
+// //         onPointerOut={() => setHovered(false)}
+// //       >
+// //         {/* Your geometry */}
+// //         <planeGeometry args={[3, 4.5, 1]} />
+
+// //         {hovered ? (
+// //           <GlowMaterial color={new Color('purple')} intensity={1} />
+// //         ) : (
+// //           <MeshBasicMaterial color={0xffffff} />
+// //         )}
+// //       </mesh>
+
+// //   );
+// // }

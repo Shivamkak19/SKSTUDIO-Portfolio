@@ -8,6 +8,7 @@ import { useCursor, MeshReflectorMaterial} from '@react-three/drei'
 
 import test from "./test"
 import projectContent from "./projectContent.json"
+import planeMeshProps from "./planeMeshProps.json"
 
 // Loads All other components into main app for export
 export default function App() {
@@ -28,13 +29,12 @@ export default function App() {
           {modelLoad({rotation, position, scale})}
           <VideoText position={[0, 1.3, -2]} />
 
-          {setPlane(() =>
-            setLabel({
-              label1: 'Custom Text 1 for Variation 1',
-            })
-          )}
-
-          {/* {setPlane()} */}
+          {/* Load planeMesh for each project, pass JSON as prop */}
+          {setPlane(planeMeshProps.ring1, projectContent.project1)}
+          {setPlane(planeMeshProps.ring2, projectContent.project2)}
+          {setPlane(planeMeshProps.ring3, projectContent.project3)}
+          {setPlane(planeMeshProps.ring4, projectContent.project4)}
+          {setPlane(planeMeshProps.ring5, projectContent.project5)}
           <Ground />
         </group>
 
@@ -88,99 +88,14 @@ function Intro() {
   })
 }
 
-// Set Text on Plane Meshes
-// function setText(props) {
-//   return (
-//     <Html
-//       transform
-//       wrapperClass="htmlScreen"
-//       distanceFactor={ 0 }
-//       position={ [-2, 1.2, 0] }
-//       rotation-x={ 0 }
-//       rotation-y={ Math.PI / 5}
-//       scale= { [ 0.1, 0.1, 0.1 ] }
-//   >
-
-//       <div className='planeText'>
-
-//       {/* Top of plane text section */}
-//       <div className="head">
-//           {/* Chrome */}
-//           <a target="_blank" href="https://developer.chrome.com/docs/extensions/"><img className="badgeLogo" src="https://img.shields.io/badge/Chrome-API-00427e?style=for-the-badge&logo=googlechrome&logoColor=61DAFB" /></a>
-
-//           {/* Spotify */}
-//           <a target="_blank" href="https://developer.spotify.com/documentation/web-api"><img className="badgeLogo" src="https://img.shields.io/badge/spotify-api-333333?style=for-the-badge&logo=spotify&logoColor=spotify&labelColor=000000" /></a>
-
-//           {/* HTML */}
-//           <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"><img className="badgeLogo" src="https://img.shields.io/badge/HTML5-dc4a25?style=for-the-badge&logo=html5&logoColor=ffffff" /></a>
-
-//           {/* CSS */}
-//           <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img className="badgeLogo" src="https://img.shields.io/badge/CSS3-2862ea?style=for-the-badge&logo=css3&logoColor=ffffff" /></a>
-
-//           {/* JS */}
-//           <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img className="badgeLogo" src="https://img.shields.io/badge/JS-000000?style=for-the-badge&logo=javascript&logoColor=efd81c" /></a>
-
-//           {/* JSON */}
-//           <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON"><img className="badgeLogo" src="https://img.shields.io/badge/JSON-919191?style=for-the-badge&logo=json&logoColor=333333" /></a>
-
-//           {/* Tonejs */}
-//           <a target="_blank" href="https://tonejs.github.io/"><img className="badgeLogo" src="https://tinyurl.com/nhzmp7wt" /></a>
-//       </div>
-
-//       {/* Main body content */}
-//       <div className="body">
-
-//           <div className="github-section">
-//             <div className="githubText">
-//               <p>View on GitHub</p>
-//             </div>
-//             <div className="githublogo">
-//               <a target="_blank" href="https://github.com/Shivamkak19/Spotify-BPMBuddy">
-//                 <img src="/github.png" className="socialLogo projectGithubLogo" alt="Github Logo"></img>
-//               </a>
-//             </div>
-//           </div>
-
-//           <img className="projectLogo" src="/projects/logo-main.png" alt="" />
-//           <div className="body-sections">
-
-//               <div className="body-text1">
-//               The Spotify BPM Buddy Chrome Extension is the perfect tool to bring
-//               your jam sessions and music practice sessions to the next level. 
-//               The extension allows users to adjust the tempo of their Spotify player 
-//               to a desired input tempo (non-commercial use only).                     
-//               </div>
-
-//               <div className="body-text2">
-//               Upon visiting https://open.spotify.com/, users will 
-//               automatically be redirected to authorize usage with their 
-//               Spotify account. Product After reaching the Spotify web player, 
-//               they will be able to access the Spotify BPMBuddy as an icon in the 
-//               footer containing the Spotify player. 
-//               </div>
-//           </div>
-
-//       </div>
-
-//       {/* Plane Footer content */}
-//       <div className="tail">
-
-//       </div>
-//       </div>
-
-//     </Html>
-//   )
-// }
-
-function setText(props) {
+function setText(props, plane_props) {
   return (
     <Html
       transform
       wrapperClass="htmlScreen"
       distanceFactor={ 0 }
-      position={ [-2, 1.2, 0] }
-      rotation-x={ 0 }
-      rotation-y={ Math.PI / 5}
+      position={ plane_props.plane_position }
+      rotation={ plane_props.plane_rotation }
       scale= { [ 0.1, 0.1, 0.1 ] }
   >
 
@@ -211,6 +126,8 @@ function setText(props) {
             </div>
           </div>
 
+          {/* <p className='githubText'>Project title</p> */}
+
           <img className="projectLogo" src= {props.logo_image} alt= {props.logo_alt} />
           <div className="body-sections">
 
@@ -230,178 +147,94 @@ function setText(props) {
 
       </div>
       </div>
-
     </Html>
   )
 }
 
 
-// function setLabel(){
-//   return(
-//     <Html
-//     transform
-//     wrapperClass="htmlScreen"
-//     distanceFactor={ 0 }
-//     position={ [-2, 0.1, 0.5] }
-//     rotation-x={ 0 }
-//     rotation-y={ Math.PI / 5}
-//     scale= { [ 0.1, 0.1, 0.1 ] }
-//     >
-
-//         <div className="label-text">
-//             Hold to Drag.              
-//         </div>
-
-//     </Html>
-//   )
-// }
-
-function setLabel(props){
+function setLabel(plane_props){
   return(
     <Html
     transform
     wrapperClass="htmlScreen"
     distanceFactor={ 0 }
-    position={ [-2, 0.1, 0.5] }
-    rotation-x={ 0 }
-    rotation-y={ Math.PI / 5}
+
+    position={ plane_props.label_position }
+    rotation={ plane_props.label_rotation }
     scale= { [ 0.1, 0.1, 0.1 ] }
     >
 
         <div className="label-text">
-            {props.label1 || 'Default Text 2'}
+            Hold to Drag.              
         </div>
 
     </Html>
   )
 }
 
-
-
-
 // Generate Plane Meshes
-function setPlane(){
-
-
+function setPlane(plane_props, text_props){
   return(
     <>
-    <PresentationControls
-      // Set attributes of presentation controls
-      // global
+      {/* Set attributes of presentation controls */}
+      <PresentationControls
+        // global
 
-      // About SKSTUDIO axis
-      polar={[-0, 0.1]}
+        // About SKSTUDIO axis
+        polar={[-0, 0.1]}
 
-      // About axis vertical through cube
-      azimuth={[-0.8, 0]}
+        // About axis vertical through cube
+        azimuth={plane_props.azimuth}
 
-      // Set attributes for spring library
-      config={ {mass: 2, tension: 400} }
-      // snap={ {mass: 4, tension: 400} }
-    >
+        // Set attributes for spring library
+        config={ {mass: 2, tension: 400} }
+        // snap={ {mass: 4, tension: 400} }
+      >
 
-      <Float rotationIntensity={ 0.4 } >  
-        <group scale={[1, 1, 1]}>
-          <mesh rotation={[0, Math.PI / 5, 0]} position = {[-2, 1.2, 0]}>
-            <planeGeometry args={[3, 2, 1]} />
+        <Float rotationIntensity={ plane_props.rotationIntensity } >  
+          <group scale={plane_props.scale_master}>
+            <mesh rotation={plane_props.plane_rotation} position = {plane_props.plane_position}>
+              <planeGeometry args={[3, 2, 1]} />
 
-              {/* <meshPhongMaterial
-                emissive={0x3812BD}
-                emissiveIntensity={1}
-                color={0x000000}
-                opacity={0.3}
-                transparent
-              /> */}
+                {/* <meshPhongMaterial
+                  emissive={0x3812BD}
+                  emissiveIntensity={1}
+                  color={0x000000}
+                  opacity={0.3}
+                  transparent
+                /> */}
 
-              <MeshReflectorMaterial
-                color="#3812BD"
-                metalness={0.4}
-                normalScale={[2, 2]}
-                opacity={0.3}
-              />
-
-
-          </mesh>
-
-          <mesh rotation={[0, Math.PI / 5, 0]} position = {[-2, 0.1, 0]}>
-              <boxGeometry 
-              
-              args={[0.75, 0.5, 0.75]} 
-              
-              
-              />
+                <MeshReflectorMaterial
+                  color={plane_props.plane_color}
+                  metalness={0.4}
+                  normalScale={[2, 2]}
+                  opacity={0.3}
+                />
+            </mesh>
+            <mesh rotation={plane_props.box_rotation} position = {plane_props.box_position}>
+              <boxGeometry args={[0.75, 0.5, 0.75]} />
 
               <meshPhongMaterial
                 // emissive={0x123048}
-                emissive={0xffffff}
+                emissive= {plane_props.box_color}
                 emissiveIntensity={1}
                 color={0x000000}
                 opacity={0.9}
                 transparent
               />
-          </mesh>
+            </mesh>
 
-          {/* {setText()} */}
 
-          {setText(projectContent.project1)}
-          {/* {setLabel(props)} */}
-
-          {/* {setLabel({
-              label1: 'Custom Text 1 for Variation 2',
-            })
-          } */}
-
-          {setLabel(test.variation1)}
-          
-        </group>
-      </Float>
-    </PresentationControls>
+            {setText(text_props, plane_props)}
+            {setLabel(plane_props)}
+          </group>
+        </Float>
+      </PresentationControls>
     </>
-
   )
 }
 
 
-
-// // function GlowMaterial(color, intensity) {
-// //   return (
-// //     <meshPhongMaterial
-// //       emissive={color}
-// //       emissiveIntensity={intensity}
-// //       color={0xffffff}
-// //       opacity={0.9}
-// //       transparent
-// //     />
-// //   );
-// // }
-
-// // function MyScene() {
-// //   const [hovered, setHovered] = useState(false);
-// //   const meshRef = useRef();
-
-// //   useFrame(() => {
-// //     meshRef.current.rotation.x += 0.01;
-// //     meshRef.current.rotation.y += 0.01;
-// //   });
-
-// //   return (
-// //       <mesh
-// //         ref={meshRef}
-// //         onPointerOver={() => setHovered(true)}
-// //         onPointerOut={() => setHovered(false)}
-// //       >
-// //         {/* Your geometry */}
-// //         <planeGeometry args={[3, 4.5, 1]} />
-
-// //         {hovered ? (
-// //           <GlowMaterial color={new Color('purple')} intensity={1} />
-// //         ) : (
-// //           <MeshBasicMaterial color={0xffffff} />
-// //         )}
-// //       </mesh>
-
-// //   );
-// // }
 
 
 
