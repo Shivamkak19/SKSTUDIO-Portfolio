@@ -1,0 +1,39 @@
+{
+    "project1": {
+        "title": "Spotify BPM Buddy",
+        "badges": [
+            { "name": "Chrome", "link": "https://developer.chrome.com/docs/extensions/", "image": "https://img.shields.io/badge/Chrome-API-00427e?style=for-the-badge&logo=googlechrome&logoColor=61DAFB" },
+            { "name": "Spotify", "link": "https://developer.spotify.com/documentation/web-api", "image": "https://img.shields.io/badge/spotify-api-333333?style=for-the-badge&logo=spotify&logoColor=spotify&labelColor=000000" },
+            { "name": "HTML", "link": "https://developer.mozilla.org/en-US/docs/Glossary/HTML5", "image": "https://img.shields.io/badge/HTML5-dc4a25?style=for-the-badge&logo=html5&logoColor=ffffff" },
+            { "name": "CSS", "link": "https://developer.mozilla.org/en-US/docs/Web/CSS", "image": "https://img.shields.io/badge/CSS3-2862ea?style=for-the-badge&logo=css3&logoColor=ffffff" },
+            { "name": "JS", "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript", "image": "https://img.shields.io/badge/JS-000000?style=for-the-badge&logo=javascript&logoColor=efd81c" },
+            { "name": "JSON", "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON", "image": "https://img.shields.io/badge/JSON-919191?style=for-the-badge&logo=json&logoColor=333333" },
+            { "name": "Tonejs", "link": "https://tonejs.github.io/", "image": "https://tinyurl.com/nhzmp7wt" }
+        ],
+        "github_link": "https://github.com/Shivamkak19/Spotify-BPMBuddy",
+        "logo_image": "/projects/logo-main.png",
+        "logo_alt": "Spotify BPM Buddy",
+        "text1": "The Spotify BPM Buddy Chrome Extension is the perfect tool to bring your jam sessions and music practice sessions to the next level. The extension allows users to adjust the tempo of their Spotify player to a desired input tempo (non-commercial use only).",
+        "text2": "Upon visiting https://open.spotify.com/, users will automatically be redirected to authorize usage with their Spotify account. Product After reaching the Spotify web player, they will be able to access the Spotify BPMBuddy as an icon in the footer containing the Spotify player. "
+        },
+
+
+        "project2": {
+            "title": "REM-Clock",
+            "badges": [
+                { "name": "Chrome", "link": "https://developer.chrome.com/docs/extensions/", "image": "https://img.shields.io/badge/Chrome-API-00427e?style=for-the-badge&logo=googlechrome&logoColor=61DAFB" },
+                { "name": "Spotify", "link": "https://developer.spotify.com/documentation/web-api", "image": "https://img.shields.io/badge/spotify-api-333333?style=for-the-badge&logo=spotify&logoColor=spotify&labelColor=000000" },
+                { "name": "HTML", "link": "https://developer.mozilla.org/en-US/docs/Glossary/HTML5", "image": "https://img.shields.io/badge/HTML5-dc4a25?style=for-the-badge&logo=html5&logoColor=ffffff" },
+                { "name": "CSS", "link": "https://developer.mozilla.org/en-US/docs/Web/CSS", "image": "https://img.shields.io/badge/CSS3-2862ea?style=for-the-badge&logo=css3&logoColor=ffffff" },
+                { "name": "JS", "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript", "image": "https://img.shields.io/badge/JS-000000?style=for-the-badge&logo=javascript&logoColor=efd81c" },
+                { "name": "JSON", "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON", "image": "https://img.shields.io/badge/JSON-919191?style=for-the-badge&logo=json&logoColor=333333" },
+                { "name": "Tonejs", "link": "https://tonejs.github.io/", "image": "https://tinyurl.com/nhzmp7wt" }
+            ],
+            "github_link": "https://github.com/Shivamkak19/Spotify-BPMBuddy",
+            "logo_image": "/projects/logo-main.png",
+            "logo_alt": "Spotify BPM Buddy",
+            "text1": "The Spotify BPM Buddy Chrome Extension is the perfect tool to bring your jam sessions and music practice sessions to the next level. The extension allows users to adjust the tempo of their Spotify player to a desired input tempo (non-commercial use only).",
+            "text2": "Upon visiting https://open.spotify.com/, users will automatically be redirected to authorize usage with their Spotify account. Product After reaching the Spotify web player, they will be able to access the Spotify BPMBuddy as an icon in the footer containing the Spotify player. "
+            }
+  }
+
