@@ -1,49 +1,46 @@
-import * as THREE from 'three'
-import React, { Suspense, useEffect, useState } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
-import { PresentationControls, Reflector, Text, useTexture, useGLTF, Html, Float} from '@react-three/drei'
 
-import ReactMarkdown from 'react-markdown';
+// React Three Fiber Imports 
+import * as THREE from 'three'
+import React, { Suspense, useEffect, useRef, useState } from 'react'
+import { Canvas, useFrame } from '@react-three/fiber'
+import { PresentationControls, Reflector, Text, useTexture, useGLTF, Html, Float, Scroll} from '@react-three/drei'
+
 import { useCursor, MeshReflectorMaterial} from '@react-three/drei'
 
-import test from "./test"
+// JSON imports
 import projectContent from "./projectContent.json"
 import planeMeshProps from "./planeMeshProps.json"
 
+
+// Theatre JS imports
+import { getProject, val } from '@theatre/core'
+import studio from '@theatre/studio'
+import extension from '@theatre/r3f/dist/extension'
+import { ScrollControls, useScroll } from "@react-three/drei";
+import { editable as e, SheetProvider, PerspectiveCamera, useCurrentSheet } from '@theatre/r3f'
+
+
+// Initialize Theatre JS studio only in dev mode
+if (import.meta.env.DEV) {
+  studio.initialize()
+  studio.extend(extension)
+}
+
+localStorage.clear();
+
 // Loads All other components into main app for export
 export default function App() {
-  
-
-  // Model transformation parameters
-  const rotation = [0, Math.PI - 0.4, 0];
-  const position = [-1.2, 0, 0.6];
-  const scale = [0.26, 0.26, 0.26];
 
   return (
-    <Canvas concurrent gl={{ alpha: false }} pixelRatio={[1, 1.5]} camera={{ position: [0, 3, 100], fov: 15 }}>
-      <color attach="background" args={['black']} />
-      <fog attach="fog" args={['black', 15, 20]} />
-      <Suspense fallback={null}>
-        <group position={[0, -1, 0]}>
+    <Canvas concurrent gl={{ alpha: false, preserveDrawingBuffer: true }} pixelRatio={[1, 1.5]}>
+        {/* Wrap in scroll controls for animation w/ mouse scroll */}
+        <ScrollControls>
 
-          {modelLoad({rotation, position, scale})}
-          <VideoText position={[0, 1.3, -2]} />
-
-          {/* Load planeMesh for each project, pass JSON as prop */}
-          {setPlane(planeMeshProps.ring1, projectContent.project1)}
-          {setPlane(planeMeshProps.ring2, projectContent.project2)}
-          {setPlane(planeMeshProps.ring3, projectContent.project3)}
-          {setPlane(planeMeshProps.ring4, projectContent.project4)}
-          {setPlane(planeMeshProps.ring5, projectContent.project5)}
-          <Ground />
-        </group>
-
-        <ambientLight intensity={0.5} />
-        <spotLight position={[0, 10, 0]} intensity={0.3} />
-        <directionalLight position={[-50, 0, -40]} intensity={0.7} />
-
-        <Intro />
-      </Suspense>
+            {/* Must wrap the scene in sheetprovider to use theatre.js */}
+            <SheetProvider sheet={ getProject('Demo Project').sheet('Demo Sheet') }>
+                <Scene />
+            </SheetProvider>
+        </ScrollControls>
     </Canvas>
   )
 }
@@ -86,7 +83,74 @@ function Intro() {
     state.camera.position.lerp(vec.set(state.mouse.x * 5, 3 + state.mouse.y * 2, 14), 0.05)
     state.camera.lookAt(0, 0, 0)
   })
+
 }
+
+
+function Scene(){
+  
+
+  // Model transformation parameters
+  const rotation = [0, Math.PI - 0.4, 0];
+  const position = [-1.2, 0, 0.6];
+  const scale = [0.26, 0.26, 0.26];
+
+  const sheet = useCurrentSheet();
+  const scroll = useScroll();
+
+  // our callback will run on every animation frame
+  useFrame(() => {
+    // the length of our sequence
+    const sequenceLength = val(sheet.sequence.pointer.length);
+    // update the "position" of the playhead in the sequence, as a fraction of its whole length
+    sheet.sequence.position = scroll.offset * sequenceLength;
+  });
+
+  return(
+    <>
+    
+      <PerspectiveCamera
+        theatreKey="Camera"
+        makeDefault
+        position={[0, 3, 100]}
+        fov={15}
+        // near={0.1}
+        // far={70}
+      />
+
+      <color attach="background" args={['black']} />
+      <fog attach="fog" args={['black', 15, 20]} />
+      <Suspense fallback={null}>
+        <group position={[0, -1, 0]}>
+
+          {modelLoad({rotation, position, scale})}
+
+          <e.group theatreKey="text">
+              <VideoText position={[0, 1.3, -2]} />
+          </e.group>
+
+          {/* Load planeMesh for each project, pass JSON as prop */}
+          {setPlane(planeMeshProps.plane1, projectContent.project1)}
+          {/* {setPlane(planeMeshProps.ring1, projectContent.project1)}
+          {setPlane(planeMeshProps.ring2, projectContent.project2)}
+          {setPlane(planeMeshProps.ring3, projectContent.project3)}
+          {setPlane(planeMeshProps.ring4, projectContent.project4)}
+          {setPlane(planeMeshProps.ring5, projectContent.project5)} */}
+          <Ground />
+        </group>
+
+        <e.ambientLight theatreKey="ambientLight" intensity={0.5} />
+        <e.spotLight theatreKey="spotLight" position={[0, 10, 0]} intensity={0.3} />
+        <e.directionalLight theatreKey="dirLight" position={[-50, 0, -40]} intensity={0.7} />
+
+        <Intro />
+      </Suspense>
+    
+    </>
+  )
+
+}
+
 
 function setText(props, plane_props) {
   return (
@@ -174,6 +238,9 @@ function setLabel(plane_props){
 
 // Generate Plane Meshes
 function setPlane(plane_props, text_props){
+
+  // console.log(plane_props.theatreKey)
+  
   return(
     <>
       {/* Set attributes of presentation controls */}
@@ -192,7 +259,7 @@ function setPlane(plane_props, text_props){
       >
 
         <Float rotationIntensity={ plane_props.rotationIntensity } >  
-          <group scale={plane_props.scale_master}>
+          <e.group theatreKey={plane_props.theatreKey} scale={plane_props.scale_master}>
             <mesh rotation={plane_props.plane_rotation} position = {plane_props.plane_position}>
               <planeGeometry args={[3, 2, 1]} />
 
@@ -227,7 +294,7 @@ function setPlane(plane_props, text_props){
 
             {setText(text_props, plane_props)}
             {setLabel(plane_props)}
-          </group>
+          </e.group>
         </Float>
       </PresentationControls>
     </>

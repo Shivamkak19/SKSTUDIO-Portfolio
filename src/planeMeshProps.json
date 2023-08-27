@@ -1,6 +1,7 @@
 {
     "plane1": {
         "title": "Plane Orientation - Left",
+        "theatreKey": "plane1",
         "notes": "rotation-y is PI / 5; ",
         "scale_master": [1, 1, 1],
         "azimuth": [-0.8, 0.6],
@@ -21,6 +22,7 @@
 
     "plane2": {
         "title": "Plane Orientation - Right",
+        "theatreKey": "plane2",
         "notes": "rotation-y is PI / 5; ",
         "scale_master": [1, 1, 1],
         "azimuth": [-0.6, 0.8],
@@ -41,6 +43,7 @@
 
     "ring1": {
         "title": "Ring Plane Mesh 1",
+        "theatreKey": "ring1",
         "notes": "rotation-y is PI / 3; ",
         "scale_master": [0.6, 0.6, 0.6],
         "azimuth": [-0.6, 0.8],
@@ -61,6 +64,7 @@
 
     "ring2": {
         "title": "Ring Plane Mesh 2",
+        "theatreKey": "ring2",
         "notes": "rotation-y is 2 PI / 9; ",
         "scale_master": [0.6, 0.6, 0.6],
         "azimuth": [-0.6, 0.8],
@@ -81,6 +85,7 @@
 
     "ring3": {
         "title": "Ring Plane Mesh 3",
+        "theatreKey": "ring3",
         "notes": "rotation-y is PI / 9; ",
         "scale_master": [0.6, 0.6, 0.6],
         "azimuth": [-0.6, 0.8],
@@ -101,6 +106,7 @@
 
     "ring4": {
         "title": "Ring Plane Mesh 4",
+        "theatreKey": "ring4",
         "notes": "rotation-y is - PI / 9; ",
         "scale_master": [0.6, 0.6, 0.6],
         "azimuth": [-0.6, 0.8],
@@ -121,6 +127,7 @@
 
     "ring5": {
         "title": "Ring Plane Mesh 5",
+        "theatreKey": "ring5",
         "notes": "rotation-y is - 2 PI / 9; ",
         "scale_master": [0.6, 0.6, 0.6],
         "azimuth": [-0.6, 0.8],
@@ -141,6 +148,7 @@
 
     "ring6": {
         "title": "Ring Plane Mesh 6",
+        "theatreKey": "ring6",
         "notes": "rotation-y is - PI / 3; ",
         "scale_master": [0.6, 0.6, 0.6],
         "azimuth": [-0.6, 0.8],
