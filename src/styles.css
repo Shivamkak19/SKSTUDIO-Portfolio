@@ -426,12 +426,14 @@ top: -140px;
     font-size: 12px;
     height: 60px;
     padding-top: 30px;
+    background-color: #000000;
 
   }
 
   .link{
     padding: 5px;
   }
+
   
 }
 
