@@ -31,7 +31,6 @@ body {
 
 #lightbox{
   display: none;
-  z-index: 2000;
   position: fixed;
 
   font-family: 'Raleway', sans-serif;
@@ -427,12 +426,15 @@ top: -140px;
     font-size: 12px;
     height: 60px;
     padding-top: 30px;
-    background-color: #0f0047;
-
+    background-color: #06001b;
+    z-index: 1000000000;
   }
 
   .link{
     padding: 5px;
+  }
+
+  #test{
   }
 
   
@@ -482,7 +484,7 @@ top: -140px;
     align-items: center;
     padding: 20px;
     padding-top: 20px;
-    background-color: #0f0047;
+    background-color: #070020;
     top: 0;
     width: 100%;
     height: 75px;  
