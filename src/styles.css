@@ -418,7 +418,7 @@ top: -140px;
     width: 300px;
     margin-left: 30%;
     margin-top: 10%;
-    background-color: #160551cf;
+    background-color: #ff003ccf;
     z-index: 1000000000;
 
   }
@@ -482,12 +482,15 @@ top: -140px;
     align-items: center;
     padding: 20px;
     padding-top: 20px;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgb(128, 255, 0);
     top: 0;
     width: 100%;
     height: 75px;  
 
     margin-left: 50px;
+
+    z-index: 1000000000;
+
   
   }
   
