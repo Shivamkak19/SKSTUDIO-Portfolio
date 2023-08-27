@@ -2,7 +2,7 @@
 // React Three Fiber Imports 
 import * as THREE from 'three'
 import React, { Suspense, useEffect, useRef, useState } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
+import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { PresentationControls, Reflector, Text, useTexture, useGLTF, Html, Float, Scroll} from '@react-three/drei'
 
 import { useCursor, MeshReflectorMaterial} from '@react-three/drei'
@@ -22,8 +22,8 @@ import { editable as e, SheetProvider, PerspectiveCamera, useCurrentSheet } from
 
 // Initialize Theatre JS studio only in dev mode
 if (import.meta.env.DEV) {
-  studio.initialize()
-  studio.extend(extension)
+  // studio.initialize()
+  // studio.extend(extension)
 }
 
 localStorage.clear();
@@ -89,6 +89,8 @@ function Intro() {
 
 function Scene(){
   
+  //Mobile Responsiveness
+  const { viewport } = useThree()
 
   // Model transformation parameters
   const rotation = [0, Math.PI - 0.4, 0];
@@ -121,8 +123,8 @@ function Scene(){
       <color attach="background" args={['black']} />
       <fog attach="fog" args={['black', 15, 20]} />
       <Suspense fallback={null}>
-        <group position={[0, -1, 0]}>
-
+        <group scale={(viewport.width / 15)} position={[0, -1, 0]}>
+        
           {modelLoad({rotation, position, scale})}
 
           <e.group theatreKey="text">
@@ -131,11 +133,11 @@ function Scene(){
 
           {/* Load planeMesh for each project, pass JSON as prop */}
           {setPlane(planeMeshProps.plane1, projectContent.project1)}
-          {/* {setPlane(planeMeshProps.ring1, projectContent.project1)}
+          {setPlane(planeMeshProps.ring1, projectContent.project1)}
           {setPlane(planeMeshProps.ring2, projectContent.project2)}
           {setPlane(planeMeshProps.ring3, projectContent.project3)}
           {setPlane(planeMeshProps.ring4, projectContent.project4)}
-          {setPlane(planeMeshProps.ring5, projectContent.project5)} */}
+          {setPlane(planeMeshProps.ring5, projectContent.project5)}
           <Ground />
         </group>
 
