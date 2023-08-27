@@ -8,16 +8,6 @@
 }
 
 
-@media (max-width: 767px) {
-  .pmndrs-menu {
-    /* Styles for mobile devices here */
-    position: fixed;
-    bottom: 0;
-    margin-top: 700px;
-    display: block;
-  }
-}
-
 html,
 body,
 #root {
@@ -25,7 +15,8 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow-y: hidden;
+  font-family: Arial, sans-serif;
 }
 
 body {
@@ -34,6 +25,125 @@ body {
   background: #101010;
   user-select: none;
 }
+
+
+/* // START of HTML STYLES -----------------------------------------------------------*/
+
+#lightbox{
+  display: none;
+  z-index: 2000;
+  position: fixed;
+
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+
+
+  border-radius: 50px;
+  box-shadow: 0px 0px 20px #4c12d3;
+  
+  z-index: 100000000;
+}
+
+
+#noteButton {
+  display: inline-block;
+  background-color: var(--color-background);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  border-radius: 50px;
+  padding: 0px 30px;
+  padding-left: 60px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.invisible{
+  display: none;
+  opacity: 0;
+
+  transition: opacity 2s;
+}
+
+.header {
+  font-size: 1vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  padding-top: 50px;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 1000;
+
+  /* Border Effect */
+  border-bottom: 5px solid transparent;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+
+  transition: all 1s; /* Added transition properties for background-color, margin-top, and border */
+}
+
+.header:hover {
+  /* background-color: rgba(19, 13, 139, 0.354);  */
+  /* White opaque background with 20% opacity */
+  border-color: rgba(34, 28, 203, 0.8);
+}
+
+.logo img {
+  width: 200px;
+  height: auto;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav li {
+  margin: 0 15px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #4734db;
+}
+
+.link{
+  background-color: transparent;
+  border: 2px solid transparent; /* Set a transparent border */
+  border-radius: 10%;
+  padding: 10px;
+
+  transition: all 1s;
+}
+
+.link:hover{
+  border-color: #ffffff;
+  /* background-color: #d7d7d767; */
+}
+
+/* // END of HTML STYLES -----------------------------------------------------------*/
 
 .fullscreen {
   position: absolute;
@@ -131,7 +241,7 @@ canvas {
   touch-action: none;
   animation: fade-in 2s ease 0.5s forwards;
 
-  /* Make canvas take full screen, mobile bug */
+  /* Make canvas take full screen, mobile */
   padding: 0;
   margin: 0;
   width: 100%;
@@ -289,5 +399,113 @@ top: -140px;
 .projectGithubLogo{
   height: 80px;
 }
+
+
+
+
+
+
+
+/* Mobile Responsiveness     --------------------------------------------*/
+
+/* Horizontal Mobile */
+@media (max-width: 1000px){
+
+  /* Display lightbox on mobile */
+  #lightbox{
+    display: block;
+    height: 250px;
+    width: 300px;
+    margin-left: 30%;
+    margin-top: 10%;
+    background-color: #160551cf;
+
+  }
+
+  .header{
+    font-size: 12px;
+    height: 60px;
+    padding-top: 30px;
+
+  }
+
+  .link{
+    padding: 5px;
+  }
+  
+}
+
+/* Vertical Mobile */
+@media (max-width: 767px) {
+
+  #lightbox{
+    height: 250px;
+    width: 300px;
+    margin-left: 10%;
+    margin-top: 40%;
+    background-color: #5030c629;
+
+  }
+
+
+  .pmndrs-menu {
+    /* Styles for mobile devices here */
+    /* position: fixed;
+    bottom: 0;
+    margin-top: 200px;
+    display: block; */
+  }
+
+  .pmndrs-menu {
+    display: block;
+    /* position: absolute; */
+    top: 600px;
+    flex-wrap: wrap;
+    margin: 0px;
+  }
+
+  .pmndrs-menu > div {
+    /* This will make two columns on each row */
+    width: 50%; 
+    margin: 0px;
+  }
+
+
+  .header {
+    display: block;
+    justify-content: space-between;
+    font-size: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    padding-top: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    width: 100%;
+    height: 75px;  
+
+    margin-left: 50px;
+  
+  }
+  
+  .logo img {
+    width: 100px;
+    height: auto;
+    margin-left: 80px;
+    padding-bottom: 5px;
+  }
+
+  .nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav li {
+    margin: 0 0px;
+  }
+}
+
 
 
