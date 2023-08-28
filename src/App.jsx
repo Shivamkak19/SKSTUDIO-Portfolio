@@ -52,6 +52,23 @@ const ringEvent = {
 
 }
 
+// Hard set to viewport dimensions used for setting 
+// Theatre.js animations and scroll container anchor points
+var windowHeight = 803;
+
+// Used to scale anchor locations in theatre.js sequence on resize
+var resizeOffsetRatio = windowHeight / 803;
+
+// adjust windowHeight and resizeOffsetRatio on viewport resize
+window.addEventListener('resize', () => {
+  windowHeight = window.innerHeight
+  resizeOffsetRatio = windowHeight / 803;
+
+  console.log("resize event")
+  console.log("inner height is now:", windowHeight, "resizeOffsetRatio:", resizeOffsetRatio)
+});
+
+
 // Loads All other components into main app for export
 export default function App() {
 
