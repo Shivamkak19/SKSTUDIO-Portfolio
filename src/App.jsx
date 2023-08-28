@@ -176,64 +176,66 @@ function Scene(){
 
 
   // Add event listeners for each link click, set scrollTop to anchor location
+  // Scale by resizeOffsetRatio (scrollTop value changes with resize)
+  // console.log(window.innerHeight) to check
   document.addEventListener("click_link1", () =>{
     console.log("hit link1")
     // scroll.el.scrollTop = 0
-    scroll.el.scrollTop = 0
+    scroll.el.scrollTop = 0 * resizeOffsetRatio
   })
 
   document.addEventListener("click_link2", () =>{
     console.log("hit link2")
     // scroll.el.scrollTop = 33000
-    scroll.el.scrollTop = 23500
+    scroll.el.scrollTop = 23500 * resizeOffsetRatio
   })
 
   document.addEventListener("click_link3", () =>{
     console.log("hit link3")
     // scroll.el.scrollTop = 38000
-    scroll.el.scrollTop = 28500
+    scroll.el.scrollTop = 28500 * resizeOffsetRatio
   })
 
   document.addEventListener("click_link4", () =>{
     console.log("hit link4")
     // scroll.el.scrollTop = 39000
-    scroll.el.scrollTop = 29000
+    scroll.el.scrollTop = 29000 * resizeOffsetRatio
   })
 
   document.addEventListener("click_link5", () =>{
     console.log("hit link5")
     // scroll.el.scrollTop = 48000
-    scroll.el.scrollTop = 36500
+    scroll.el.scrollTop = 36500 * resizeOffsetRatio
   })
 
   document.addEventListener("click_ring1", () =>{
     console.log("hit ring1")
     // scroll.el.scrollTop = 4400
-    scroll.el.scrollTop = 4400
+    scroll.el.scrollTop = 4400 * resizeOffsetRatio
   })
 
   document.addEventListener("click_ring2", () =>{
     console.log("hit ring2")
     // scroll.el.scrollTop = 10000
-    scroll.el.scrollTop = 7000
+    scroll.el.scrollTop = 7000 * resizeOffsetRatio
   })
 
   document.addEventListener("click_ring3", () =>{
     console.log("hit ring3")
     // scroll.el.scrollTop = 16000
-    scroll.el.scrollTop = 11000
+    scroll.el.scrollTop = 11000 * resizeOffsetRatio
   })
 
   document.addEventListener("click_ring4", () =>{
     console.log("hit ring4")
     // scroll.el.scrollTop = 21000
-    scroll.el.scrollTop = 15000
+    scroll.el.scrollTop = 15000 * resizeOffsetRatio
   })
 
   document.addEventListener("click_ring5", () =>{
     console.log("hit ring5")
     // scroll.el.scrollTop = 27000
-    scroll.el.scrollTop = 19000
+    scroll.el.scrollTop = 19000 * resizeOffsetRatio
   })
 
   // callback will run on every animation frame
