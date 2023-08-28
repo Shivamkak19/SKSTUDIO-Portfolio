@@ -48,7 +48,11 @@ body {
   color: #f2ff9a;
 }
 
-
+/* to nullify link styles applied to links parsed from JSON values */
+.linkNormal{
+  text-decoration: none;
+  color: #f2ff9a;
+}
 /* // START of HTML STYLES -----------------------------------------------------------*/
 
 #lightbox{
@@ -421,6 +425,14 @@ top: -140px;
   height: 80px;
 }
 
+.body-title{
+  position: absolute;
+  top: 75px;
+  font-family: 'Raleway', sans-serif;
+  color: #ffffff;
+  font-size: 60px;
+  line-height: 70px;
+}
 
 
 

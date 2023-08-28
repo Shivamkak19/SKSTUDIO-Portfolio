@@ -11,6 +11,12 @@
         "floatingRange": [1, 10],
         "snap": "",
 
+        "title_positionLeft": 575,
+        "title_content": "",
+        "title_sub": "",
+        "title_sub2": "",
+        "image_positionLeft": "",
+
         "plane_rotation": [0, 0.62831853071, 0],
         "plane_position": [-2, 1.2, 0],
 
@@ -35,6 +41,12 @@
         "floatingIntensity": 1,
         "floatingRange": [1, 10],
         "snap": "",
+
+        "title_positionLeft": "575px",
+        "title_content": "Dual-Class Share",
+        "title_sub": "Arbitrage Algorithm",
+        "title_sub2": "",
+        "image_positionLeft": "",
 
         "plane_rotation": [0, -0.62831853071, 0],
         "plane_position": [2, 1.2, 0],
@@ -61,6 +73,12 @@
         "floatingRange": [1, 10],
         "snap": "",
 
+        "title_positionLeft": "575px",
+        "title_content": "",
+        "title_sub": "",
+        "title_sub2": "",
+        "image_positionLeft": "",
+
         "plane_rotation": [0, 0.62831853071, 0],
         "plane_position": [-2, 1.2, 0],
 
@@ -85,6 +103,12 @@
         "floatingIntensity": 1,
         "floatingRange": [1, 10],
         "snap": "",
+
+        "title_positionLeft": "575px",
+        "title_content": "",
+        "title_sub": "",
+        "title_sub2": "",
+        "image_positionLeft": "",
 
         "plane_rotation": [0, -0.62831853071, 0],
         "plane_position": [2, 1.2, 0],
@@ -111,6 +135,12 @@
         "floatingRange": [1, 10],
         "snap": "",
 
+        "title_positionLeft": "575px",
+        "title_content": "AI - House:",
+        "title_sub": "learning project for AI @ Princeton",
+        "title_sub2": "",
+        "image_positionLeft": "",
+
         "plane_rotation": [0, 0.62831853071, 0],
         "plane_position": [-2, 1.2, 0],
 
@@ -135,6 +165,12 @@
         "floatingIntensity": 1,
         "floatingRange": [1, 10],
         "snap": "",
+
+        "title_positionLeft": "575px",
+        "title_content": "Bio Details:",
+        "title_sub": "Shivam Kak",
+        "title_sub2": "",
+        "image_positionLeft": "",
 
         "plane_rotation": [0, -0.62831853071, 0],
         "plane_position": [2, 1.2, 0],
@@ -161,6 +197,12 @@
         "floatingRange": [1, 10],
         "snap": "",
 
+        "title_positionLeft": "575px",
+        "title_content": "Services Provided",
+        "title_sub": "",
+        "title_sub2": "",
+        "image_positionLeft": "",
+
         "plane_rotation": [0, 0.62831853071, 0],
         "plane_position": [-2, 1.2, 0],
 
@@ -185,6 +227,12 @@
         "floatingIntensity": 1,
         "floatingRange": [1, 10],
         "snap": "",
+
+        "title_positionLeft": "100px",
+        "title_content": "Inquiries",
+        "title_sub": "Don't hesitate to",
+        "title_sub2": "reach out.",
+        "image_positionLeft": "350px",
 
         "plane_rotation": [0, -0.62831853071, 0],
         "plane_position": [2, 1.2, 0],
@@ -211,6 +259,12 @@
         "floatingRange": [1, 5],
         "snap": {"mass": 4, "tension": 400},
 
+        "title_positionLeft": "575px",
+        "title_content": "",
+        "title_sub": "",
+        "title_sub2": "",
+        "image_positionLeft": "",
+
         "plane_rotation": [0, 0, 0],
         "plane_position": [0, 1.2, -2.5],
 
@@ -235,6 +289,12 @@
         "floatingIntensity": 0,
         "floatingRange": [1, 5],
         "snap": {"mass": 4, "tension": 400},
+
+        "title_positionLeft": "575px",
+        "title_content": "Dual-Class Share",
+        "title_sub": "Arbitrage Algorithm",
+        "title_sub2": "",
+        "image_positionLeft": "",
 
         "plane_rotation": [0, 0, 0],
         "plane_position": [0, 1.2, -2.5],
@@ -261,6 +321,12 @@
         "floatingRange": [1, 5],
         "snap": {"mass": 4, "tension": 400},
 
+        "title_positionLeft": "575px",
+        "title_content": "",
+        "title_sub": "",
+        "title_sub2": "",
+        "image_positionLeft": "",
+
         "plane_rotation": [0, 0, 0],
         "plane_position": [0, 1.2, -2.5],
 
@@ -285,6 +351,12 @@
         "floatingIntensity": 0,
         "floatingRange": [1, 5],
         "snap": {"mass": 4, "tension": 400},
+
+        "title_positionLeft": "575px",
+        "title_content": "",
+        "title_sub": "",
+        "title_sub2": "",
+        "image_positionLeft": "",
 
         "plane_rotation": [0, 0, 0],
         "plane_position": [0, 1.2, -2.5],
@@ -311,6 +383,12 @@
         "floatingRange": [1, 5],
         "snap": {"mass": 4, "tension": 400},
 
+        "title_positionLeft": "575px",
+        "title_content": "AI - House:",
+        "title_sub": "learning project for AI @ Princeton",
+        "title_sub2": "",
+        "image_positionLeft": "",
+
         "plane_rotation": [0, 0, 0],
         "plane_position": [0, 1.2, -2.5],
 
@@ -335,6 +413,12 @@
         "floatingIntensity": 0,
         "floatingRange": [1, 5],
         "snap": {"mass": 4, "tension": 400},
+
+        "title_positionLeft": "575px",
+        "title_content": "",
+        "title_sub": "",
+        "title_sub2": "",
+        "image_positionLeft": "",
 
         "plane_rotation": [0, 0, 0],
         "plane_position": [0, 1.2, -2.5],

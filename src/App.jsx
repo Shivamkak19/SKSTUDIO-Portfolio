@@ -161,52 +161,62 @@ function Scene(){
   // Add event listeners for each link click, set scrollTop to anchor location
   document.addEventListener("click_link1", () =>{
     console.log("hit link1")
+    // scroll.el.scrollTop = 0
     scroll.el.scrollTop = 0
   })
 
   document.addEventListener("click_link2", () =>{
     console.log("hit link2")
-    scroll.el.scrollTop = 33000
+    // scroll.el.scrollTop = 33000
+    scroll.el.scrollTop = 23500
   })
 
   document.addEventListener("click_link3", () =>{
     console.log("hit link3")
-    scroll.el.scrollTop = 38000
+    // scroll.el.scrollTop = 38000
+    scroll.el.scrollTop = 28500
   })
 
   document.addEventListener("click_link4", () =>{
     console.log("hit link4")
-    scroll.el.scrollTop = 39000
+    // scroll.el.scrollTop = 39000
+    scroll.el.scrollTop = 29000
   })
 
   document.addEventListener("click_link5", () =>{
     console.log("hit link5")
-    scroll.el.scrollTop = 48000
+    // scroll.el.scrollTop = 48000
+    scroll.el.scrollTop = 36500
   })
 
   document.addEventListener("click_ring1", () =>{
     console.log("hit ring1")
+    // scroll.el.scrollTop = 4400
     scroll.el.scrollTop = 4400
   })
 
   document.addEventListener("click_ring2", () =>{
     console.log("hit ring2")
-    scroll.el.scrollTop = 10000
+    // scroll.el.scrollTop = 10000
+    scroll.el.scrollTop = 7000
   })
 
   document.addEventListener("click_ring3", () =>{
     console.log("hit ring3")
-    scroll.el.scrollTop = 16000
+    // scroll.el.scrollTop = 16000
+    scroll.el.scrollTop = 11000
   })
 
   document.addEventListener("click_ring4", () =>{
     console.log("hit ring4")
-    scroll.el.scrollTop = 21000
+    // scroll.el.scrollTop = 21000
+    scroll.el.scrollTop = 15000
   })
 
   document.addEventListener("click_ring5", () =>{
     console.log("hit ring5")
-    scroll.el.scrollTop = 27000
+    // scroll.el.scrollTop = 27000
+    scroll.el.scrollTop = 19000
   })
 
   // callback will run on every animation frame
@@ -341,18 +351,31 @@ function setText(props, plane_props) {
 
           {/* <p className='githubText'>Project title</p> */}
 
-          <img className="projectLogo" src= {props.logo_image} alt= {props.logo_alt} />
-          <div className="body-sections">
+          {/* Title Content */}
+          <div className="body-title" style={ { left: plane_props.title_positionLeft } }> 
+            {plane_props.title_content} <br /> 
+            {plane_props.title_sub} <br />
+            {plane_props.title_sub2} 
+          </div>
 
+          {/* style prop passed for optional image displacement */}
+          <img className="projectLogo" src= {props.logo_image} alt= {props.logo_alt} 
+          style={ { marginLeft: plane_props.image_positionLeft } }
+          />
+          
+          <div className="body-sections">
               <div className="body-text1">
                     {props.text1}                 
               </div>
 
-              <div className="body-text2">
-                    {props.text2}
-              </div>
-          </div>
+              {/* set innerHTML to parse links <a></a> in text as needed (i.e. ai-house link) */}
+              <div className="body-text2" dangerouslySetInnerHTML={{ __html: props.text2 }} />
 
+              {/* Normal text2 div */}
+              {/* <div className="body-text2">
+                    {props.text2}
+              </div> */}
+          </div>
       </div>
 
       {/* Plane Footer content */}
