@@ -10,6 +10,7 @@ import { useCursor, MeshReflectorMaterial} from '@react-three/drei'
 // JSON imports
 import projectContent from "./projectContent.json"
 import planeMeshProps from "./planeMeshProps.json"
+import animationState from "./animationStateTheatreJS_linear.json"
 
 
 // Theatre JS imports
@@ -22,8 +23,8 @@ import { editable as e, SheetProvider, PerspectiveCamera, useCurrentSheet } from
 
 // Initialize Theatre JS studio only in dev mode
 if (import.meta.env.DEV) {
-  // studio.initialize()
-  // studio.extend(extension)
+  studio.initialize()
+  studio.extend(extension)
 }
 
 localStorage.clear();
@@ -31,17 +32,25 @@ localStorage.clear();
 // Loads All other components into main app for export
 export default function App() {
 
-  return (
-    <Canvas concurrent gl={{ alpha: false, preserveDrawingBuffer: true }} pixelRatio={[1, 1.5]}>
-        {/* Wrap in scroll controls for animation w/ mouse scroll */}
-        <ScrollControls>
+  
+  // const mySheet =  getProject('Demo Project').sheet('Demo Sheet')
+  const mySheet = getProject("SKSTUDIO Animation State", {state: animationState}).sheet("SKSTUDIO_SCENE");
 
-            {/* Must wrap the scene in sheetprovider to use theatre.js */}
-            <SheetProvider sheet={ getProject('Demo Project').sheet('Demo Sheet') }>
-                <Scene />
-            </SheetProvider>
-        </ScrollControls>
-    </Canvas>
+
+  return (
+    <>
+        <Header />
+        <Canvas concurrent gl={{ alpha: false, preserveDrawingBuffer: true }} pixelRatio={[1, 1.5]}>
+            {/* Wrap in scroll controls for animation w/ mouse scroll */}
+            <ScrollControls pages={50}>
+
+                {/* Must wrap the scene in sheetprovider to use theatre.js */}
+                <SheetProvider sheet={ mySheet } >
+                    <Scene />
+                </SheetProvider>
+            </ScrollControls>
+        </Canvas>
+    </>
   )
 }
 
@@ -100,13 +109,54 @@ function Scene(){
   const sheet = useCurrentSheet();
   const scroll = useScroll();
 
+  // scroll.el. = 1
+
+  console.log(scroll.el.scrollTopMax)
+  console.log(scroll.offset)
+
+
+  scroll.el.onscroll = () => {
+    console.log("we out")
+    console.log(scroll.el.scrollTop)
+
+  }
+
+  const scrollGoal = 30000
+console.log("gate 2")
+const boolean = (scroll.el.scrollTop - scrollGoal) > 200
+const num = Math.abs(scroll.el.scrollTop - scrollGoal)
+
+console.log(boolean)
+console.log (num)
+
+  while (Math.abs(scroll.el.scrollTop - scrollGoal) > 200) {
+    console.log("inside out")
+    setTimeout(() =>{
+      if (scroll.el.scrollTop < scrollGoal) {
+        scroll.el.scrollTop += 100;
+      } else {
+        scroll.el.scrollTop -= 100;
+      }
+      console.log("inside")
+      console.log(scroll.el.scrollTop)
+
+    // Repeat after 0.1 seconds
+    }, 10); 
+  }
+
+  console.log("gate 2 end")
+
+
   // our callback will run on every animation frame
   useFrame(() => {
     // the length of our sequence
     const sequenceLength = val(sheet.sequence.pointer.length);
+
     // update the "position" of the playhead in the sequence, as a fraction of its whole length
     sheet.sequence.position = scroll.offset * sequenceLength;
   });
+
+
 
   return(
     <>
@@ -124,6 +174,8 @@ function Scene(){
       <fog attach="fog" args={['black', 15, 20]} />
       <Suspense fallback={null}>
         <group scale={(viewport.width / 15)} position={[0, -1, 0]}>
+
+          
         
           {modelLoad({rotation, position, scale})}
 
@@ -133,6 +185,15 @@ function Scene(){
 
           {/* Load planeMesh for each project, pass JSON as prop */}
           {setPlane(planeMeshProps.plane1, projectContent.project1)}
+          {setPlane(planeMeshProps.plane2, projectContent.project1)}
+          {setPlane(planeMeshProps.plane3, projectContent.project1)}
+          {setPlane(planeMeshProps.plane4, projectContent.project1)}
+          {setPlane(planeMeshProps.plane5, projectContent.project1)}
+          {setPlane(planeMeshProps.plane6, projectContent.project1)}
+          {setPlane(planeMeshProps.plane7, projectContent.project1)}
+          {setPlane(planeMeshProps.plane8, projectContent.project1)}
+
+          {/* Load duplicates for "View All Projects Section" */}
           {setPlane(planeMeshProps.ring1, projectContent.project1)}
           {setPlane(planeMeshProps.ring2, projectContent.project2)}
           {setPlane(planeMeshProps.ring3, projectContent.project3)}
@@ -260,7 +321,15 @@ function setPlane(plane_props, text_props){
         // snap={ {mass: 4, tension: 400} }
       >
 
-        <Float rotationIntensity={ plane_props.rotationIntensity } >  
+        <Float 
+        // XYZ float rotation
+        rotationIntensity={ plane_props.rotationIntensity } 
+        // Up/down float intensity, works like a multiplier with floatingRange,defaults to 1
+        floatIntensity={ plane_props.floatingIntensity} 
+        // Range of y-axis values the object will float within, defaults to [-0.1,0.1]
+        floatingRange={ plane_props.floatingRange} 
+        >  
+
           <e.group theatreKey={plane_props.theatreKey} scale={plane_props.scale_master}>
             <mesh rotation={plane_props.plane_rotation} position = {plane_props.plane_position}>
               <planeGeometry args={[3, 2, 1]} />
@@ -304,6 +373,85 @@ function setPlane(plane_props, text_props){
 }
 
 
+function Header() {
+
+  // Add event listeners for links to animation anchors
+  const handleLinkClick1 = (event) => {
+    event.preventDefault();
+    console.log("clicked 1");
+    scroll.offset = 0
+    console.log(scroll.offset)
+  };
+
+  const handleLinkClick2 = (event) => {
+    event.preventDefault();
+    console.log("clicked 2");
+    scroll.offset = 0.25
+    console.log(scroll.offset)
+
+  };
+
+  const handleLinkClick3 = (event) => {
+    event.preventDefault();
+    console.log("clicked 3");
+    scroll.offset = 0.5
+    console.log(scroll.offset)
+
+  };
+
+  const handleLinkClick4 = (event) => {
+    event.preventDefault();
+    console.log("clicked 4");
+    scroll.offset = 0.75
+    console.log(scroll.offset)
+
+  };
+
+  const handleLinkClick5 = (event) => {
+    event.preventDefault();
+    console.log("clicked 5");
+    scroll.offset = 1
+    console.log(scroll.offset)
+
+  };
+
+  return (
+    <header className="header">
+      <div className="logo">
+        <img src="/skstudio-logo.png" alt="Logo" />
+      </div>
+      <nav className="nav">
+        <ul>
+          <li id="link1" className="link">
+            <a href="#" onClick={handleLinkClick1}>
+              Home
+            </a>
+          </li>
+          <li id="link2" className="link">
+            <a href="#" onClick={handleLinkClick2}>
+              About
+            </a>
+          </li>
+          <li id="link3" className="link">
+            <a href="#" onClick={handleLinkClick3}>
+              Inquiries
+            </a>
+          </li>
+          <li id="link4" className="link">
+            <a href="#" onClick={handleLinkClick4}>
+              Services
+            </a>
+          </li>
+          <li id="link5" className="link">
+            <a href="#" onClick={handleLinkClick5}>
+              All Projects
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
+}
 
 
 
