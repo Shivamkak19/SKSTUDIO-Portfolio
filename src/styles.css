@@ -15,7 +15,7 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow-y: hidden;
+  overflow: auto;
   font-family: Arial, sans-serif;
 }
 
@@ -24,6 +24,28 @@ body {
   color: white;
   background: #101010;
   user-select: none;
+}
+
+/* HTML Text component messages ------------------------------------------- */
+
+.introText{
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: #f2ff9a;
+}
+
+.outroText{
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  justify-content: center;
+  line-height: 15px;
+  color: #ffffff;
+}
+
+#outroLink{
+  text-decoration: none;
+  color: #f2ff9a;
 }
 
 

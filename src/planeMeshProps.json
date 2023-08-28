@@ -2,12 +2,14 @@
     "plane1": {
         "title": "Plane Orientation - Left",
         "theatreKey": "plane1",
+        "eventName": "plane1",
         "notes": "rotation-y is PI / 5; ",
         "scale_master": [1, 1, 1],
         "azimuth": [-0.8, 0.6],
         "rotationIntensity": 0.4,
         "floatingIntensity": 1,
         "floatingRange": [1, 10],
+        "snap": "",
 
         "plane_rotation": [0, 0.62831853071, 0],
         "plane_position": [-2, 1.2, 0],
@@ -25,12 +27,14 @@
     "plane2": {
         "title": "Plane Orientation - Right",
         "theatreKey": "plane2",
+        "eventName": "plane2",
         "notes": "rotation-y is PI / 5; ",
         "scale_master": [1, 1, 1],
         "azimuth": [-0.6, 0.8],
         "rotationIntensity": 0.4,
         "floatingIntensity": 1,
         "floatingRange": [1, 10],
+        "snap": "",
 
         "plane_rotation": [0, -0.62831853071, 0],
         "plane_position": [2, 1.2, 0],
@@ -48,12 +52,14 @@
     "plane3": {
         "title": "Plane Orientation - Left",
         "theatreKey": "plane3",
+        "eventName": "plane3",
         "notes": " Copy of plane1 ",
         "scale_master": [1, 1, 1],
         "azimuth": [-0.8, 0.6],
         "rotationIntensity": 0.4,
         "floatingIntensity": 1,
         "floatingRange": [1, 10],
+        "snap": "",
 
         "plane_rotation": [0, 0.62831853071, 0],
         "plane_position": [-2, 1.2, 0],
@@ -71,12 +77,14 @@
     "plane4": {
         "title": "Plane Orientation - Right",
         "theatreKey": "plane4",
+        "eventName": "plane4",
         "notes": " Copy of plane2 ",
         "scale_master": [1, 1, 1],
         "azimuth": [-0.6, 0.8],
         "rotationIntensity": 0.4,
         "floatingIntensity": 1,
         "floatingRange": [1, 10],
+        "snap": "",
 
         "plane_rotation": [0, -0.62831853071, 0],
         "plane_position": [2, 1.2, 0],
@@ -94,12 +102,14 @@
     "plane5": {
         "title": "Plane Orientation - Left",
         "theatreKey": "plane5",
+        "eventName": "plane5",
         "notes": " Copy of plane1 ",
         "scale_master": [1, 1, 1],
         "azimuth": [-0.8, 0.6],
         "rotationIntensity": 0.4,
         "floatingIntensity": 1,
         "floatingRange": [1, 10],
+        "snap": "",
 
         "plane_rotation": [0, 0.62831853071, 0],
         "plane_position": [-2, 1.2, 0],
@@ -117,12 +127,14 @@
     "plane6": {
         "title": "Plane Orientation - Right",
         "theatreKey": "plane6",
+        "eventName": "plane6",
         "notes": "Copy of plane2 ",
         "scale_master": [1, 1, 1],
         "azimuth": [-0.6, 0.8],
         "rotationIntensity": 0.4,
         "floatingIntensity": 1,
         "floatingRange": [1, 10],
+        "snap": "",
 
         "plane_rotation": [0, -0.62831853071, 0],
         "plane_position": [2, 1.2, 0],
@@ -140,12 +152,14 @@
     "plane7": {
         "title": "Plane Orientation - Left",
         "theatreKey": "plane7",
+        "eventName": "plane7",
         "notes": "Copy of plane1 ",
         "scale_master": [1, 1, 1],
         "azimuth": [-0.8, 0.6],
         "rotationIntensity": 0.4,
         "floatingIntensity": 1,
         "floatingRange": [1, 10],
+        "snap": "",
 
         "plane_rotation": [0, 0.62831853071, 0],
         "plane_position": [-2, 1.2, 0],
@@ -163,12 +177,14 @@
     "plane8": {
         "title": "Plane Orientation - Right",
         "theatreKey": "plane8",
+        "eventName": "plane8",
         "notes": "Copy of plane2",
         "scale_master": [1, 1, 1],
         "azimuth": [-0.6, 0.8],
         "rotationIntensity": 0.4,
         "floatingIntensity": 1,
         "floatingRange": [1, 10],
+        "snap": "",
 
         "plane_rotation": [0, -0.62831853071, 0],
         "plane_position": [2, 1.2, 0],
@@ -186,12 +202,14 @@
     "ring1": {
         "title": "Ring Plane Mesh 1",
         "theatreKey": "ring1",
+        "eventName": "ring1",
         "notes": "rotation-y is PI / 3; ",
         "scale_master": [0.6, 0.6, 0.6],
         "azimuth": [-0.6, 0.8],
         "rotationIntensity": 0.3,
         "floatingIntensity": 0,
         "floatingRange": [1, 5],
+        "snap": {"mass": 4, "tension": 400},
 
         "plane_rotation": [0, 0, 0],
         "plane_position": [0, 1.2, -2.5],
@@ -209,12 +227,14 @@
     "ring2": {
         "title": "Ring Plane Mesh 2",
         "theatreKey": "ring2",
+        "eventName": "ring2",
         "notes": "rotation-y is 2 PI / 9; ",
         "scale_master": [0.6, 0.6, 0.6],
         "azimuth": [-0.6, 0.8],
         "rotationIntensity": 0.3,
         "floatingIntensity": 0,
         "floatingRange": [1, 5],
+        "snap": {"mass": 4, "tension": 400},
 
         "plane_rotation": [0, 0, 0],
         "plane_position": [0, 1.2, -2.5],
@@ -232,12 +252,14 @@
     "ring3": {
         "title": "Ring Plane Mesh 3",
         "theatreKey": "ring3",
+        "eventName": "ring3",
         "notes": "rotation-y is PI / 9; ",
         "scale_master": [0.6, 0.6, 0.6],
         "azimuth": [-0.6, 0.8],
         "rotationIntensity": 0.3,
         "floatingIntensity": 0,
         "floatingRange": [1, 5],
+        "snap": {"mass": 4, "tension": 400},
 
         "plane_rotation": [0, 0, 0],
         "plane_position": [0, 1.2, -2.5],
@@ -255,12 +277,14 @@
     "ring4": {
         "title": "Ring Plane Mesh 4",
         "theatreKey": "ring4",
+        "eventName": "ring4",
         "notes": "rotation-y is - PI / 9; ",
         "scale_master": [0.6, 0.6, 0.6],
         "azimuth": [-0.6, 0.8],
         "rotationIntensity": 0.3,
         "floatingIntensity": 0,
         "floatingRange": [1, 5],
+        "snap": {"mass": 4, "tension": 400},
 
         "plane_rotation": [0, 0, 0],
         "plane_position": [0, 1.2, -2.5],
@@ -278,12 +302,14 @@
     "ring5": {
         "title": "Ring Plane Mesh 5",
         "theatreKey": "ring5",
+        "eventName": "ring5",
         "notes": "rotation-y is - 2 PI / 9; ",
         "scale_master": [0.6, 0.6, 0.6],
         "azimuth": [-0.6, 0.8],
         "rotationIntensity": 0.3,
         "floatingIntensity": 0,
         "floatingRange": [1, 5],
+        "snap": {"mass": 4, "tension": 400},
 
         "plane_rotation": [0, 0, 0],
         "plane_position": [0, 1.2, -2.5],
@@ -301,12 +327,14 @@
     "ring6": {
         "title": "Ring Plane Mesh 6",
         "theatreKey": "ring6",
+        "eventName": "ring6",
         "notes": "rotation-y is - PI / 3; ",
         "scale_master": [0.6, 0.6, 0.6],
         "azimuth": [-0.6, 0.8],
         "rotationIntensity": 0.3,
         "floatingIntensity": 0,
         "floatingRange": [1, 5],
+        "snap": {"mass": 4, "tension": 400},
 
         "plane_rotation": [0, 0, 0],
         "plane_position": [0, 1.2, -2.5],

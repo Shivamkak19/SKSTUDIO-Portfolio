@@ -10,7 +10,7 @@ import { useCursor, MeshReflectorMaterial} from '@react-three/drei'
 // JSON imports
 import projectContent from "./projectContent.json"
 import planeMeshProps from "./planeMeshProps.json"
-import animationState from "./animationStateTheatreJS_linear.json"
+import animationState from "./animationStateTheatreJS_V4.json"
 
 
 // Theatre JS imports
@@ -29,6 +29,29 @@ if (import.meta.env.DEV) {
 
 localStorage.clear();
 
+// import Scrollbar from 'smooth-scrollbar';
+// Scrollbar.init(document.querySelector('#root'));
+
+// Initialize custom events for clicking on rings in all projects view
+// Store in String-object pairs; access object through JSON-string value
+const ringEvent = {
+
+  ring1 : new Event('click_ring1'),
+  ring2 : new Event("click_ring2"),
+  ring3 : new Event('click_ring3'),
+  ring4 : new Event("click_ring4"),
+  ring5 : new Event("click_ring5"),
+  plane1: new Event("click_plane1"),
+  plane2: new Event("click_plane2"),
+  plane3: new Event("click_plane3"),
+  plane4: new Event("click_plane4"),
+  plane5: new Event("click_plane5"),
+  plane6: new Event("click_plane6"),
+  plane7: new Event("click_plane7"),
+  plane8: new Event("click_plane8"),
+
+}
+
 // Loads All other components into main app for export
 export default function App() {
 
@@ -42,7 +65,7 @@ export default function App() {
         <Header />
         <Canvas concurrent gl={{ alpha: false, preserveDrawingBuffer: true }} pixelRatio={[1, 1.5]}>
             {/* Wrap in scroll controls for animation w/ mouse scroll */}
-            <ScrollControls pages={50}>
+            <ScrollControls pages={50} className="my_scrollbar">
 
                 {/* Must wrap the scene in sheetprovider to use theatre.js */}
                 <SheetProvider sheet={ mySheet } >
@@ -97,6 +120,25 @@ function Intro() {
 
 
 function Scene(){
+
+    // Trial: Make scroll jump more smooth
+  // scroll.el.scrollbehavior = smooth
+
+  // while (Math.abs(scroll.el.scrollTop - scrollGoal) > 200) {
+  //   console.log("inside out")
+  //   setTimeout(() =>{
+  //     if (scroll.el.scrollTop < scrollGoal) {
+  //       scroll.el.scrollTop += 100;
+  //     } else {
+  //       scroll.el.scrollTop -= 100;
+  //     }
+  //     console.log("inside")
+  //     console.log(scroll.el.scrollTop)
+
+  //   // Repeat after 0.1 seconds
+  //   }, 10); 
+  // }
+
   
   //Mobile Responsiveness
   const { viewport } = useThree()
@@ -109,54 +151,71 @@ function Scene(){
   const sheet = useCurrentSheet();
   const scroll = useScroll();
 
-  // scroll.el. = 1
-
-  console.log(scroll.el.scrollTopMax)
-  console.log(scroll.offset)
-
-
+  // Access scroll position via scroll.el
+  // Exposes css scroll container
   scroll.el.onscroll = () => {
-    console.log("we out")
-    console.log(scroll.el.scrollTop)
-
+    console.log("scrollTop value:", scroll.el.scrollTop)
   }
 
-  const scrollGoal = 30000
-console.log("gate 2")
-const boolean = (scroll.el.scrollTop - scrollGoal) > 200
-const num = Math.abs(scroll.el.scrollTop - scrollGoal)
 
-console.log(boolean)
-console.log (num)
+  // Add event listeners for each link click, set scrollTop to anchor location
+  document.addEventListener("click_link1", () =>{
+    console.log("hit link1")
+    scroll.el.scrollTop = 0
+  })
 
-  while (Math.abs(scroll.el.scrollTop - scrollGoal) > 200) {
-    console.log("inside out")
-    setTimeout(() =>{
-      if (scroll.el.scrollTop < scrollGoal) {
-        scroll.el.scrollTop += 100;
-      } else {
-        scroll.el.scrollTop -= 100;
-      }
-      console.log("inside")
-      console.log(scroll.el.scrollTop)
+  document.addEventListener("click_link2", () =>{
+    console.log("hit link2")
+    scroll.el.scrollTop = 33000
+  })
 
-    // Repeat after 0.1 seconds
-    }, 10); 
-  }
+  document.addEventListener("click_link3", () =>{
+    console.log("hit link3")
+    scroll.el.scrollTop = 38000
+  })
 
-  console.log("gate 2 end")
+  document.addEventListener("click_link4", () =>{
+    console.log("hit link4")
+    scroll.el.scrollTop = 39000
+  })
 
+  document.addEventListener("click_link5", () =>{
+    console.log("hit link5")
+    scroll.el.scrollTop = 48000
+  })
 
-  // our callback will run on every animation frame
+  document.addEventListener("click_ring1", () =>{
+    console.log("hit ring1")
+    scroll.el.scrollTop = 4400
+  })
+
+  document.addEventListener("click_ring2", () =>{
+    console.log("hit ring2")
+    scroll.el.scrollTop = 10000
+  })
+
+  document.addEventListener("click_ring3", () =>{
+    console.log("hit ring3")
+    scroll.el.scrollTop = 16000
+  })
+
+  document.addEventListener("click_ring4", () =>{
+    console.log("hit ring4")
+    scroll.el.scrollTop = 21000
+  })
+
+  document.addEventListener("click_ring5", () =>{
+    console.log("hit ring5")
+    scroll.el.scrollTop = 27000
+  })
+
+  // callback will run on every animation frame
   useFrame(() => {
     // the length of our sequence
     const sequenceLength = val(sheet.sequence.pointer.length);
-
     // update the "position" of the playhead in the sequence, as a fraction of its whole length
     sheet.sequence.position = scroll.offset * sequenceLength;
   });
-
-
 
   return(
     <>
@@ -174,10 +233,37 @@ console.log (num)
       <fog attach="fog" args={['black', 15, 20]} />
       <Suspense fallback={null}>
         <group scale={(viewport.width / 15)} position={[0, -1, 0]}>
-
-          
         
           {modelLoad({rotation, position, scale})}
+
+          <e.group theatreKey='introText'>
+            <Html
+                transform
+                className='introText'
+                distanceFactor={ 0 }
+                scale= { [ 0.4, 0.4, 0.4 ] }
+                position={[0, 0, 0]}
+            > 
+              Welcome to SKSTUDIO. Scroll to view contents. 
+            </Html>
+          </e.group>
+
+          <e.group theatreKey='outroText'>
+            <Html
+                transform
+                className='outroText'
+                distanceFactor={ 0 }
+                scale= { [ 0.4, 0.4, 0.4 ] }
+                position={[0, 0, 0]}
+            > 
+              Click on a featured project for full view. 
+              <br />
+              All projects are available on GitHub 
+              <a id = "outroLink" target="_blank" href="https://github.com/Shivamkak19"> @Shivamkak19</a>
+.  
+
+            </Html>
+          </e.group>
 
           <e.group theatreKey="text">
               <VideoText position={[0, 1.3, -2]} />
@@ -318,7 +404,7 @@ function setPlane(plane_props, text_props){
 
         // Set attributes for spring library
         config={ {mass: 2, tension: 400} }
-        // snap={ {mass: 4, tension: 400} }
+        snap= { plane_props.snap }
       >
 
         <Float 
@@ -330,7 +416,7 @@ function setPlane(plane_props, text_props){
         floatingRange={ plane_props.floatingRange} 
         >  
 
-          <e.group theatreKey={plane_props.theatreKey} scale={plane_props.scale_master}>
+          <e.group theatreKey={plane_props.theatreKey} scale={plane_props.scale_master} onClick={ () => {disPatchRingClickEvent(plane_props.eventName)}}>
             <mesh rotation={plane_props.plane_rotation} position = {plane_props.plane_position}>
               <planeGeometry args={[3, 2, 1]} />
 
@@ -372,47 +458,54 @@ function setPlane(plane_props, text_props){
   )
 }
 
+// Must be passed to onClick via arrow function to pass props
+// pass value to onClick instead of assigning onClick = dispatchRingClickEvent()
+function disPatchRingClickEvent(eventName) {
+
+  document.dispatchEvent(ringEvent[eventName]);
+  console.log("Dispatched event:",  eventName)
+}
 
 function Header() {
+
+  // First, initialize custom events
+  const click1 = new Event('click_link1');
+  const click2 = new Event("click_link2");
+  const click3 = new Event('click_link3');
+  const click4 = new Event("click_link4");
+  const click5 = new Event("click_link5");
+
+
 
   // Add event listeners for links to animation anchors
   const handleLinkClick1 = (event) => {
     event.preventDefault();
     console.log("clicked 1");
-    scroll.offset = 0
-    console.log(scroll.offset)
+    document.dispatchEvent(click1);
   };
 
   const handleLinkClick2 = (event) => {
     event.preventDefault();
     console.log("clicked 2");
-    scroll.offset = 0.25
-    console.log(scroll.offset)
-
+    document.dispatchEvent(click2);
   };
 
   const handleLinkClick3 = (event) => {
     event.preventDefault();
     console.log("clicked 3");
-    scroll.offset = 0.5
-    console.log(scroll.offset)
-
+    document.dispatchEvent(click3);
   };
 
   const handleLinkClick4 = (event) => {
     event.preventDefault();
     console.log("clicked 4");
-    scroll.offset = 0.75
-    console.log(scroll.offset)
-
+    document.dispatchEvent(click4);
   };
 
   const handleLinkClick5 = (event) => {
     event.preventDefault();
     console.log("clicked 5");
-    scroll.offset = 1
-    console.log(scroll.offset)
-
+    document.dispatchEvent(click5);
   };
 
   return (
