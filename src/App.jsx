@@ -271,13 +271,13 @@ function Scene(){
 
           {/* Load planeMesh for each project, pass JSON as prop */}
           {setPlane(planeMeshProps.plane1, projectContent.project1)}
-          {setPlane(planeMeshProps.plane2, projectContent.project1)}
-          {setPlane(planeMeshProps.plane3, projectContent.project1)}
-          {setPlane(planeMeshProps.plane4, projectContent.project1)}
-          {setPlane(planeMeshProps.plane5, projectContent.project1)}
-          {setPlane(planeMeshProps.plane6, projectContent.project1)}
-          {setPlane(planeMeshProps.plane7, projectContent.project1)}
-          {setPlane(planeMeshProps.plane8, projectContent.project1)}
+          {setPlane(planeMeshProps.plane2, projectContent.project2)}
+          {setPlane(planeMeshProps.plane3, projectContent.project3)}
+          {setPlane(planeMeshProps.plane4, projectContent.project4)}
+          {setPlane(planeMeshProps.plane5, projectContent.project5)}
+          {setPlane(planeMeshProps.plane6, projectContent.project6)}
+          {setPlane(planeMeshProps.plane7, projectContent.project7)}
+          {setPlane(planeMeshProps.plane8, projectContent.project8)}
 
           {/* Load duplicates for "View All Projects Section" */}
           {setPlane(planeMeshProps.ring1, projectContent.project1)}
