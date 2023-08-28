@@ -10,7 +10,7 @@ import { useCursor, MeshReflectorMaterial} from '@react-three/drei'
 // JSON imports
 import projectContent from "./projectContent.json"
 import planeMeshProps from "./planeMeshProps.json"
-import animationState from "./animationStateTheatreJS_V4.json"
+import animationState from "./animationStateTheatreJS_V5.json"
 
 
 // Theatre JS imports
