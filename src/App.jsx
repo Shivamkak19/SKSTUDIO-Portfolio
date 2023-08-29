@@ -261,7 +261,8 @@ function Scene(){
       <color attach="background" args={['black']} />
       <fog attach="fog" args={['black', 15, 20]} />
       <Suspense fallback={null}>
-        <group scale={(viewport.width / 15)} position={[0, -1, 0]}>
+        {/* <group scale={(viewport.width / 15)} position={[0, -1, 0]}> */}
+        <group scale={[0.5, 0.5, 0.5]} position={[0, -1, 0]}>
         
           {modelLoad({rotation, position, scale})}
 
