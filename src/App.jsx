@@ -29,6 +29,10 @@ if (import.meta.env.DEV) {
 
 localStorage.clear();
 
+// Vercel Analytics
+import { inject } from '@vercel/analytics';
+inject();
+
 // import Scrollbar from 'smooth-scrollbar';
 // Scrollbar.init(document.querySelector('#root'));
 
