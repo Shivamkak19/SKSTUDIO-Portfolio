@@ -117,7 +117,7 @@
         "logo_image": "/projects/services-pic.png",
         "logo_alt": "Services list",
         "text1": "<div style='line-height: 30px'> Software Development <br /> <br /> I enjoy working on projects related to cybersecurity and app development. <br /> I am most comfortable with: <ul> <li>Python</li>  <li>Java </li>  <li> Javascript  </li>  </ul> </div> ",
-        "text2": "<div style='line-height: 30px'> Web Development <br /> <br /> I specialize in websites that make use of 3D environments, much like this site. <br /> I primarily use: <ul> <li>React</li>  <li>Three.js</li>  <li>React-Three-Fiber (R3F) / Drei </li>  </ul>  </div> "
+        "text2": "<div style='font-size: 20px; line-height: 30px'> Web Development <br /> <br /> I specialize in websites that make use of 3D environments, much like this site. <br /> I primarily use: <ul> <li>React</li>  <li>Three.js</li>  <li>React-Three-Fiber (R3F) / Drei </li>  </ul>  </div> "
         },
 
 
