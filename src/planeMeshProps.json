@@ -73,8 +73,8 @@
         "floatingRange": [1, 10],
         "snap": "",
 
-        "title_positionLeft": "575px",
-        "title_content": "",
+        "title_positionLeft": "425px",
+        "title_content": "REM-Clock",
         "title_sub": "",
         "title_sub2": "",
         "image_positionLeft": "",
@@ -321,8 +321,8 @@
         "floatingRange": [1, 5],
         "snap": {"mass": 4, "tension": 400},
 
-        "title_positionLeft": "575px",
-        "title_content": "",
+        "title_positionLeft": "425px",
+        "title_content": "REM-Clock",
         "title_sub": "",
         "title_sub2": "",
         "image_positionLeft": "",

@@ -23,7 +23,7 @@ body {
   font-family: 'Inter var', sans-serif;
   color: white;
   background: #101010;
-  user-select: none;
+  /* user-select: none; */
 }
 
 /* HTML Text component messages ------------------------------------------- */
@@ -370,7 +370,7 @@ top: -140px;
   position: absolute;
   left: 50px;
   bottom: -370px;
-  background-color: #161902;
+  background-color: #2500ac6d;
   font-size: 20px;
   line-height: 30px;
 
@@ -386,7 +386,7 @@ top: -140px;
   position: absolute;
   left: 650px;
   bottom: -370px;
-  background-color: #161902;
+  background-color: #2500ac6d;
   font-size: 20px;
   line-height: 30px;
 
@@ -427,6 +427,7 @@ top: -140px;
 
 .body-title{
   position: absolute;
+  width: 550px;
   top: 75px;
   font-family: 'Raleway', sans-serif;
   color: #ffffff;
@@ -434,6 +435,19 @@ top: -140px;
   line-height: 70px;
 }
 
+
+
+.body ul {
+  list-style: none; /* Remove default bullet points */
+  padding-left: 20px; /* Add some left padding for the bullet points */
+}
+
+.body ul li::before {
+  content: "\2022"; /* Unicode character for bullet point */
+  color: #ff0000; /* Set the color to your desired color value */
+  font-size: 1em; /* Adjust the font size if needed */
+  margin-right: 10px; /* Add some spacing between bullet and content */
+}
 
 
 

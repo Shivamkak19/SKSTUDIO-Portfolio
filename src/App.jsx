@@ -383,15 +383,16 @@ function setText(props, plane_props) {
           />
           
           <div className="body-sections">
-              <div className="body-text1">
-                    {props.text1}                 
-              </div>
 
               {/* set innerHTML to parse links <a></a> in text as needed (i.e. ai-house link) */}
+              <div className="body-text1" dangerouslySetInnerHTML={{ __html: props.text1 }} />
               <div className="body-text2" dangerouslySetInnerHTML={{ __html: props.text2 }} />
 
-              {/* Normal text2 div */}
-              {/* <div className="body-text2">
+              {/* Normal text1 and text2 div */}
+              {/* <div className="body-text1">
+                    {props.text1}                 
+              </div>
+              <div className="body-text2">
                     {props.text2}
               </div> */}
           </div>

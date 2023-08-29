@@ -19,142 +19,120 @@
 
 
 
-        "project2": {
-            "title": "REM-Clock",
-            "badges": [
-                { "name": "Chrome", "link": "https://developer.chrome.com/docs/extensions/", "image": "https://img.shields.io/badge/Chrome-API-00427e?style=for-the-badge&logo=googlechrome&logoColor=61DAFB" },
-                { "name": "Spotify", "link": "https://developer.spotify.com/documentation/web-api", "image": "https://img.shields.io/badge/spotify-api-333333?style=for-the-badge&logo=spotify&logoColor=spotify&labelColor=000000" },
-                { "name": "HTML", "link": "https://developer.mozilla.org/en-US/docs/Glossary/HTML5", "image": "https://img.shields.io/badge/HTML5-dc4a25?style=for-the-badge&logo=html5&logoColor=ffffff" },
-                { "name": "CSS", "link": "https://developer.mozilla.org/en-US/docs/Web/CSS", "image": "https://img.shields.io/badge/CSS3-2862ea?style=for-the-badge&logo=css3&logoColor=ffffff" },
-                { "name": "JS", "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript", "image": "https://img.shields.io/badge/JS-000000?style=for-the-badge&logo=javascript&logoColor=efd81c" },
-                { "name": "JSON", "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON", "image": "https://img.shields.io/badge/JSON-919191?style=for-the-badge&logo=json&logoColor=333333" },
-                { "name": "Tonejs", "link": "https://tonejs.github.io/", "image": "https://tinyurl.com/nhzmp7wt" }
-            ],
-            "github_link": "https://github.com/Shivamkak19/Spotify-BPMBuddy",
-            "logo_image": "/projects/product2-logo.png",
-            "logo_alt": "Spotify BPM Buddy",
-            "text1": "The REMCLOCK BPM Buddy Chrome Extension is the perfect tool to bring your jam sessions and music practice sessions to the next level. The extension allows users to adjust the tempo of their Spotify player to a desired input tempo (non-commercial use only).",
-            "text2": "Upon visiting https://open.spotify.com/, users will automatically be redirected to authorize usage with their Spotify account. Product After reaching the Spotify web player, they will be able to access the Spotify BPMBuddy as an icon in the footer containing the Spotify player. "
-            },
+    "project2": {
+        "title": "Dual-Class Share Trading Algorithm",
+        "badges": [
+            { "name": "Pandas", "link": "https://pandas.pydata.org/", "image": "https://img.shields.io/badge/Pandas-e30487?style=for-the-badge&logo=pandas&logoColor=130654" },
+            { "name": "Scheduler", "link": "https://pypi.org/project/scheduler/", "image": "https://tinyurl.com/k2s8w8k8" },
+            { "name": "Streamlit", "link": "https://streamlit.io/", "image": "https://tinyurl.com/5792xvz2" },
+            { "name": "Alpaca-py", "link": "https://alpaca.markets/docs/python-sdk/", "image": "https://tinyurl.com/2ufu9dsy" },
+            { "name": "Darqube", "link": "https://api.darqube.com/#tag/Reference-Data", "image": "https://tinyurl.com/556uh3mr" }
+
+        ],
+        "github_link": "https://github.com/Shivamkak19/Dual-Class-Arbitrage-Algorithm",
+        "logo_image": "/projects/product2-logo.png",
+        "logo_alt": "Dual-Class-Arbitrage-Algorithm",
+        "text1": "This algorithm takes advantage of an arbitrage between certain dual-class shares that hold nearly identical market caps. It identifies price discrepencies between publicly-traded shares in a dual-class structure and marks short/long orders via the Alpaca market API.",
+        "text2": "This project was designed as a learning project for the purpose of exposure into the process of developing trading algorithms. Any usage must be compliant with Pattern Day Trading rules, and failure to comply with these standards automatically flags the user's Alpaca client."
+        },
 
 
 
-        "project3": {
-            "title": "REM-Clock",
-            "badges": [
-                { "name": "Chrome", "link": "https://developer.chrome.com/docs/extensions/", "image": "https://img.shields.io/badge/Chrome-API-00427e?style=for-the-badge&logo=googlechrome&logoColor=61DAFB" },
-                { "name": "Spotify", "link": "https://developer.spotify.com/documentation/web-api", "image": "https://img.shields.io/badge/spotify-api-333333?style=for-the-badge&logo=spotify&logoColor=spotify&labelColor=000000" },
-                { "name": "HTML", "link": "https://developer.mozilla.org/en-US/docs/Glossary/HTML5", "image": "https://img.shields.io/badge/HTML5-dc4a25?style=for-the-badge&logo=html5&logoColor=ffffff" },
-                { "name": "CSS", "link": "https://developer.mozilla.org/en-US/docs/Web/CSS", "image": "https://img.shields.io/badge/CSS3-2862ea?style=for-the-badge&logo=css3&logoColor=ffffff" },
-                { "name": "JS", "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript", "image": "https://img.shields.io/badge/JS-000000?style=for-the-badge&logo=javascript&logoColor=efd81c" },
-                { "name": "JSON", "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON", "image": "https://img.shields.io/badge/JSON-919191?style=for-the-badge&logo=json&logoColor=333333" },
-                { "name": "Tonejs", "link": "https://tonejs.github.io/", "image": "https://tinyurl.com/nhzmp7wt" }
-            ],
-            "github_link": "https://github.com/Shivamkak19/Spotify-BPMBuddy",
-            "logo_image": "/projects/product3-logo.png",
-            "logo_alt": "Spotify BPM Buddy",
-            "text1": "The REMCLOCK BPM Buddy Chrome Extension is the perfect tool to bring your jam sessions and music practice sessions to the next level. The extension allows users to adjust the tempo of their Spotify player to a desired input tempo (non-commercial use only).",
-            "text2": "Upon visiting https://open.spotify.com/, users will automatically be redirected to authorize usage with their Spotify account. Product After reaching the Spotify web player, they will be able to access the Spotify BPMBuddy as an icon in the footer containing the Spotify player. "
-            },
+    "project3": {
+        "title": "REM-Clock",
+        "badges": [
+            { "name": "Arduino", "link": "https://www.arduino.cc/", "image": "https://img.shields.io/badge/Arduino-008183?style=for-the-badge&logo=arduino&logoColor=000000" },
+            { "name": "C++", "link": "https://cplusplus.com/", "image": "https://img.shields.io/badge/C++-00427e?style=for-the-badge&logo=cplusplus&logoColor=61DAFB" }
+        ],
+        "github_link": "https://github.com/Shivamkak19/REM-Clock",
+        "logo_image": "/projects/product3-logo.png",
+        "logo_alt": "REM-Clock",
+        "text1": "Have you ever wanted to optimize the sleep you get at night? Sleep therapists recommend waking from sleep after completion of a REM cycle; the REM-Clock sets an alarm that wakes up users after an input REM sleep cycle count to maximize restful sleep for users.",
+        "text2": "Once the source code is uploaded onto an Arduino Uno, the user must strap their finger into the heart rate monitor finger clasp. The LED panel will display important information regarding REM sleep cycle count, and the alarm will ring after the input REM cycle count has elapsed."
+        },
 
 
 
-        "project4": {
-            "title": "REM-Clock",
-            "badges": [
-                { "name": "Chrome", "link": "https://developer.chrome.com/docs/extensions/", "image": "https://img.shields.io/badge/Chrome-API-00427e?style=for-the-badge&logo=googlechrome&logoColor=61DAFB" },
-                { "name": "Spotify", "link": "https://developer.spotify.com/documentation/web-api", "image": "https://img.shields.io/badge/spotify-api-333333?style=for-the-badge&logo=spotify&logoColor=spotify&labelColor=000000" },
-                { "name": "HTML", "link": "https://developer.mozilla.org/en-US/docs/Glossary/HTML5", "image": "https://img.shields.io/badge/HTML5-dc4a25?style=for-the-badge&logo=html5&logoColor=ffffff" },
-                { "name": "CSS", "link": "https://developer.mozilla.org/en-US/docs/Web/CSS", "image": "https://img.shields.io/badge/CSS3-2862ea?style=for-the-badge&logo=css3&logoColor=ffffff" },
-                { "name": "JS", "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript", "image": "https://img.shields.io/badge/JS-000000?style=for-the-badge&logo=javascript&logoColor=efd81c" },
-                { "name": "JSON", "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON", "image": "https://img.shields.io/badge/JSON-919191?style=for-the-badge&logo=json&logoColor=333333" },
-                { "name": "Tonejs", "link": "https://tonejs.github.io/", "image": "https://tinyurl.com/nhzmp7wt" }
-            ],
-            "github_link": "https://github.com/Shivamkak19/Spotify-BPMBuddy",
-            "logo_image": "/projects/product4-logo.png",
-            "logo_alt": "Spotify BPM Buddy",
-            "text1": "The REMCLOCK BPM Buddy Chrome Extension is the perfect tool to bring your jam sessions and music practice sessions to the next level. The extension allows users to adjust the tempo of their Spotify player to a desired input tempo (non-commercial use only).",
-            "text2": "Upon visiting https://open.spotify.com/, users will automatically be redirected to authorize usage with their Spotify account. Product After reaching the Spotify web player, they will be able to access the Spotify BPMBuddy as an icon in the footer containing the Spotify player. "
-            },
+    "project4": {
+        "title": "Voice-Protect",
+        "badges": [
+            { "name": "Pytorch", "link": "https://pytorch.org/", "image": "https://img.shields.io/badge/Pytorch-000000?style=for-the-badge&logo=pytorch&logoColor=ee4c2a" },
+            { "name": "Tortoise-tts", "link": "https://github.com/neonbjb/tortoise-tts", "image": "https://img.shields.io/badge/Tortoise-TTS-1e883d.svg?&labelColor=ffffff" },
+            { "name": "Pydub", "link": "http://pydub.com/", "image": "https://img.shields.io/badge/Py-Dub-0399cc.svg?&labelColor=ffffff" },
+            { "name": "torchaudio", "link": "https://pytorch.org/audio/stable/index.html", "image": "https://tinyurl.com/4tum7vw2" },
+            { "name": "Streamlit", "link": "https://streamlit.io/", "image": "https://tinyurl.com/5792xvz2" },
+            { "name": "Pyaudio", "link": "https://pypi.org/project/PyAudio/", "image": "https://tinyurl.com/mrywhpyf" },
+            { "name": "Librosa", "link": "https://librosa.org/", "image": "https://tinyurl.com/42b6b5mm" }
+        ],
+        "github_link": "https://github.com/Shivamkak19/Deepfake-Detector",
+        "logo_image": "/projects/product4-logo.png",
+        "logo_alt": "Deepfake-Detector",
+        "text1": "VoiceProtect allows users to gauge whether audio files or live audio streams have been generated with AI by leveraging the Tortoise-TTS library. As deepfake audio scams are becoming more prevalent, reliable deepfake audio detectors will become increasingly relevant. ",
+        "text2": "Upon visiting https://open.spotify.com/, users will automatically be redirected to authorize usage with their Spotify account. Product After reaching the Spotify web player, they will be able to access the Spotify BPMBuddy as an icon in the footer containing the Spotify player. "
+        },
 
 
 
-        "project5": {
-            "title": "REM-Clock",
-            "badges": [
-                { "name": "Chrome", "link": "https://developer.chrome.com/docs/extensions/", "image": "https://img.shields.io/badge/Chrome-API-00427e?style=for-the-badge&logo=googlechrome&logoColor=61DAFB" },
-                { "name": "Spotify", "link": "https://developer.spotify.com/documentation/web-api", "image": "https://img.shields.io/badge/spotify-api-333333?style=for-the-badge&logo=spotify&logoColor=spotify&labelColor=000000" },
-                { "name": "HTML", "link": "https://developer.mozilla.org/en-US/docs/Glossary/HTML5", "image": "https://img.shields.io/badge/HTML5-dc4a25?style=for-the-badge&logo=html5&logoColor=ffffff" },
-                { "name": "CSS", "link": "https://developer.mozilla.org/en-US/docs/Web/CSS", "image": "https://img.shields.io/badge/CSS3-2862ea?style=for-the-badge&logo=css3&logoColor=ffffff" },
-                { "name": "JS", "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript", "image": "https://img.shields.io/badge/JS-000000?style=for-the-badge&logo=javascript&logoColor=efd81c" },
-                { "name": "JSON", "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON", "image": "https://img.shields.io/badge/JSON-919191?style=for-the-badge&logo=json&logoColor=333333" },
-                { "name": "Tonejs", "link": "https://tonejs.github.io/", "image": "https://tinyurl.com/nhzmp7wt" }
-            ],
-            "github_link": "https://github.com/Shivamkak19/Spotify-BPMBuddy",
-            "logo_image": "/projects/product5-logo.png",
-            "logo_alt": "Spotify BPM Buddy",
-            "text1": "The REMCLOCK BPM Buddy Chrome Extension is the perfect tool to bring your jam sessions and music practice sessions to the next level. The extension allows users to adjust the tempo of their Spotify player to a desired input tempo (non-commercial use only).",
-            "text2": "Upon visiting https://open.spotify.com/, users will automatically be redirected to authorize usage with their Spotify account. Product After reaching the Spotify web player, they will be able to access the Spotify BPMBuddy as an icon in the footer containing the Spotify player. "
-            },
+    "project5": {
+        "title": "AI - House",
+        "badges": [
+            { "name": "Three.js", "link": "https://threejs.org/", "image": "https://img.shields.io/badge/Three.js-6592e6?style=for-the-badge&logo=threedotjs&logoColor=000000" },
+            { "name": "Node.js", "link": "https://nodejs.org/en", "image": "https://img.shields.io/badge/Node.js-333333?style=for-the-badge&logo=nodedotjs&logoColor=3f873e" },
+            { "name": "GSAP", "link": "https://greensock.com/gsap/", "image": "https://img.shields.io/badge/GSAP-88ce02?style=for-the-badge&logo=greensock&logoColor=000000" },
+            { "name": "vite", "link": "https://vitejs.dev/", "image": "https://img.shields.io/badge/Vite.js-ac49fe?style=for-the-badge&logo=vite&logoColor=ffd52e" },
+            { "name": "blender", "link": "https://www.blender.org/", "image": "https://img.shields.io/badge/Blender-165a8f?style=for-the-badge&logo=blender&logoColor=f4792b" }
+
+        ],
+        "github_link": "https://github.com/Shivamkak19/ai-house",
+        "logo_image": "/projects/product5-logo.png",
+        "logo_alt": "ai-house",
+        "text1": "Ai-house is a three.js learning project that utilizes a GLTF model loaded into the web environment. The project was made as a website for AI @ Princeton, an organization focused on teaching students on campus about developments in the field of AI/ML.",
+        "text2": " Link to live website: <br /> <a class = 'linkNormal' href = 'backprop.cs.princeton.edu' target='_blank' style='top: 100px'> backprop.cs.princeton.edu </a>"
+        },
 
 
 
-            "project6": {
-                "title": "REM-Clock",
-                "badges": [
-                    { "name": "Chrome", "link": "https://developer.chrome.com/docs/extensions/", "image": "https://img.shields.io/badge/Chrome-API-00427e?style=for-the-badge&logo=googlechrome&logoColor=61DAFB" },
-                    { "name": "Spotify", "link": "https://developer.spotify.com/documentation/web-api", "image": "https://img.shields.io/badge/spotify-api-333333?style=for-the-badge&logo=spotify&logoColor=spotify&labelColor=000000" },
-                    { "name": "HTML", "link": "https://developer.mozilla.org/en-US/docs/Glossary/HTML5", "image": "https://img.shields.io/badge/HTML5-dc4a25?style=for-the-badge&logo=html5&logoColor=ffffff" },
-                    { "name": "CSS", "link": "https://developer.mozilla.org/en-US/docs/Web/CSS", "image": "https://img.shields.io/badge/CSS3-2862ea?style=for-the-badge&logo=css3&logoColor=ffffff" },
-                    { "name": "JS", "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript", "image": "https://img.shields.io/badge/JS-000000?style=for-the-badge&logo=javascript&logoColor=efd81c" },
-                    { "name": "JSON", "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON", "image": "https://img.shields.io/badge/JSON-919191?style=for-the-badge&logo=json&logoColor=333333" },
-                    { "name": "Tonejs", "link": "https://tonejs.github.io/", "image": "https://tinyurl.com/nhzmp7wt" }
-                ],
-                "github_link": "https://github.com/Shivamkak19/Spotify-BPMBuddy",
-                "logo_image": "/projects/about-profilepic3.png",
-                "logo_alt": "Spotify BPM Buddy",
-                "text1": "The REMCLOCK BPM Buddy Chrome Extension is the perfect tool to bring your jam sessions and music practice sessions to the next level. The extension allows users to adjust the tempo of their Spotify player to a desired input tempo (non-commercial use only).",
-                "text2": "Upon visiting https://open.spotify.com/, users will automatically be redirected to authorize usage with their Spotify account. Product After reaching the Spotify web player, they will be able to access the Spotify BPMBuddy as an icon in the footer containing the Spotify player. "
-                },
+
+    "project6": {
+        "title": "About",
+        "badges": [
+
+        ],
+        "github_link": "https://github.com/Shivamkak19",
+        "logo_image": "/projects/about-profilepic.png",
+        "logo_alt": "Shivam Kak profile picture",
+        "text1": "Hi! I am a sophomore at Princeton University pursuing a major in Computer Science and minors in Applied Mathematics, Statistics & Machine Learning, and Robotics & Intelligent Systems. I'm originally from the Chicago area (I love snow -- hence the mountains video playing in the back). ",
+        "text2": "I enjoy approaching questions related to language processing from a computational lense. All things music, 3D graphics, programming, languages, and math are cool to me. My goal is ultimately to work in the field of machine learning research and development."
+        },
 
 
 
-                "project7": {
-                    "title": "REM-Clock",
-                    "badges": [
-                        { "name": "Chrome", "link": "https://developer.chrome.com/docs/extensions/", "image": "https://img.shields.io/badge/Chrome-API-00427e?style=for-the-badge&logo=googlechrome&logoColor=61DAFB" },
-                        { "name": "Spotify", "link": "https://developer.spotify.com/documentation/web-api", "image": "https://img.shields.io/badge/spotify-api-333333?style=for-the-badge&logo=spotify&logoColor=spotify&labelColor=000000" },
-                        { "name": "HTML", "link": "https://developer.mozilla.org/en-US/docs/Glossary/HTML5", "image": "https://img.shields.io/badge/HTML5-dc4a25?style=for-the-badge&logo=html5&logoColor=ffffff" },
-                        { "name": "CSS", "link": "https://developer.mozilla.org/en-US/docs/Web/CSS", "image": "https://img.shields.io/badge/CSS3-2862ea?style=for-the-badge&logo=css3&logoColor=ffffff" },
-                        { "name": "JS", "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript", "image": "https://img.shields.io/badge/JS-000000?style=for-the-badge&logo=javascript&logoColor=efd81c" },
-                        { "name": "JSON", "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON", "image": "https://img.shields.io/badge/JSON-919191?style=for-the-badge&logo=json&logoColor=333333" },
-                        { "name": "Tonejs", "link": "https://tonejs.github.io/", "image": "https://tinyurl.com/nhzmp7wt" }
-                    ],
-                    "github_link": "https://github.com/Shivamkak19/Spotify-BPMBuddy",
-                    "logo_image": "/projects/services-pic.png",
-                    "logo_alt": "Spotify BPM Buddy",
-                    "text1": "The REMCLOCK BPM Buddy Chrome Extension is the perfect tool to bring your jam sessions and music practice sessions to the next level. The extension allows users to adjust the tempo of their Spotify player to a desired input tempo (non-commercial use only).",
-                    "text2": "Upon visiting https://open.spotify.com/, users will automatically be redirected to authorize usage with their Spotify account. Product After reaching the Spotify web player, they will be able to access the Spotify BPMBuddy as an icon in the footer containing the Spotify player. "
-                    },
+    "project7": {
+        "title": "Services",
+        "badges": [
+
+
+        ],
+        "github_link": "https://github.com/Shivamkak19",
+        "logo_image": "/projects/services-pic.png",
+        "logo_alt": "Services list",
+        "text1": "<div style='line-height: 30px'> Software Development <br /> <br /> I enjoy working on projects related to cybersecurity and app development. <br /> I am most comfortable with: <ul> <li>Python</li>  <li>Java </li>  <li> Javascript  </li>  </ul> </div> ",
+        "text2": "<div style='line-height: 30px'> Web Development <br /> <br /> I specialize in websites that make use of 3D environments, much like this site. <br /> I primarily use: <ul> <li>React</li>  <li>Three.js</li>  <li>React-Three-Fiber (R3F) / Drei </li>  </ul>  </div> "
+        },
 
 
 
-                    "project8": {
-                        "title": "REM-Clock",
-                        "badges": [
-                            { "name": "Chrome", "link": "https://developer.chrome.com/docs/extensions/", "image": "https://img.shields.io/badge/Chrome-API-00427e?style=for-the-badge&logo=googlechrome&logoColor=61DAFB" },
-                            { "name": "Spotify", "link": "https://developer.spotify.com/documentation/web-api", "image": "https://img.shields.io/badge/spotify-api-333333?style=for-the-badge&logo=spotify&logoColor=spotify&labelColor=000000" },
-                            { "name": "HTML", "link": "https://developer.mozilla.org/en-US/docs/Glossary/HTML5", "image": "https://img.shields.io/badge/HTML5-dc4a25?style=for-the-badge&logo=html5&logoColor=ffffff" },
-                            { "name": "CSS", "link": "https://developer.mozilla.org/en-US/docs/Web/CSS", "image": "https://img.shields.io/badge/CSS3-2862ea?style=for-the-badge&logo=css3&logoColor=ffffff" },
-                            { "name": "JS", "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript", "image": "https://img.shields.io/badge/JS-000000?style=for-the-badge&logo=javascript&logoColor=efd81c" },
-                            { "name": "JSON", "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON", "image": "https://img.shields.io/badge/JSON-919191?style=for-the-badge&logo=json&logoColor=333333" },
-                            { "name": "Tonejs", "link": "https://tonejs.github.io/", "image": "https://tinyurl.com/nhzmp7wt" }
-                        ],
-                        "github_link": "https://github.com/Shivamkak19/Spotify-BPMBuddy",
-                        "logo_image": "/projects/inquiry-pic.png",
-                        "logo_alt": "Spotify BPM Buddy",
-                        "text1": "The REMCLOCK BPM Buddy Chrome Extension is the perfect tool to bring your jam sessions and music practice sessions to the next level. The extension allows users to adjust the tempo of their Spotify player to a desired input tempo (non-commercial use only).",
-                        "text2": "Upon visiting https://open.spotify.com/, users will automatically be redirected to authorize usage with their Spotify account. Product After reaching the Spotify web player, they will be able to access the Spotify BPMBuddy as an icon in the footer containing the Spotify player. "
-                        }
+    "project8": {
+        "title": "REM-Clock",
+        "badges": [
+
+
+        ],
+        "github_link": "https://github.com/Shivamkak19",
+        "logo_image": "/projects/inquiry-pic.png",
+        "logo_alt": "Inquiries/Contact",
+        "text1": "<div style='line-height: 30px'> Contact Information <br /> <ul> <li> Get in touch! <br /> I primarily check email at:</li> <br /> <li>sk3686@princeton.edu</li> </ul> </div>",
+        "text2": "<div style='line-height: 30px'> If you are interested in working together: <br /> <br /> <ul> <li> Scan the QR code on the business card above for my resume. </li> <br /> <li>For examples of work for past web dev clients, contact me directly </li>  </ul> </div>"
+        }
   }
 
