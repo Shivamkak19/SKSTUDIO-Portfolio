@@ -38,7 +38,7 @@ export function Footer({ date, year, link1, link2 }) {
           <a href="mailto:sk3686@princeton.edu?subject=Inquiries">Contact</a>
         </span>
         <span>        
-          <a href="https://www.etsy.com/listing/1527344405/custom-shirt-for-shivam-unisex-heavy">Merchandise</a>
+          {/* <a href="https://www.etsy.com/listing/1527344405/custom-shirt-for-shivam-unisex-heavy">Merchandise</a> */}
         </span>
       </div>
       <div style={{ width: '100%' }} />
