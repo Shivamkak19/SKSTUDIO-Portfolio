@@ -48,7 +48,7 @@
         "logo_image": "/projects/product3-logo.png",
         "logo_alt": "REM-Clock",
         "text1": "Have you ever wanted to optimize the sleep you get at night? Sleep therapists recommend waking from sleep after completion of a REM cycle; the REM-Clock sets an alarm that wakes up users after an input REM sleep cycle count to maximize restful sleep for users.",
-        "text2": "Once the source code is uploaded onto an Arduino Uno, the user must strap their finger into the heart rate monitor finger clasp. The LED panel will display important information regarding REM sleep cycle count, and the alarm will ring after the input REM cycle count has elapsed."
+        "text2": "This was created as a final project for ECE 203: Circuit Design/Analysis. Once the source code is uploaded onto an Arduino Uno, the user must strap their finger into the heart rate monitor finger clasp. The alarm will ring after the input REM cycle count has elapsed."
         },
 
 
@@ -87,7 +87,7 @@
         "logo_image": "/projects/product5-logo.png",
         "logo_alt": "ai-house",
         "text1": "Ai-house is a three.js learning project that utilizes a GLTF model loaded into the web environment. The project was made as a website for AI @ Princeton, an organization focused on teaching students on campus about developments in the field of AI/ML.",
-        "text2": " Link to live website: <br /> <a class = 'linkNormal' href = 'backprop.cs.princeton.edu' target='_blank' style='top: 100px'> backprop.cs.princeton.edu </a>"
+        "text2": " Link to live website: <br /> <a class = 'linkNormal' href = 'https://ai-house.vercel.app/' target='_blank' style='top: 100px'> backprop.cs.princeton.edu </a>"
         },
 
 
