@@ -333,7 +333,7 @@ function Scene(){
   document.addEventListener("click_link5", () =>{
     console.log("hit link5")
     // scroll.el.scrollTop = 48000
-    scroll.el.scrollTop = 50000 * resizeOffsetRatio
+    scroll.el.scrollTop = 40000 * resizeOffsetRatio
   })
 
 //   RING LINKS
