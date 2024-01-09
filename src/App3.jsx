@@ -319,14 +319,14 @@ function Scene(){
   document.addEventListener("click_link3", () =>{
     console.log("hit link3")
     // scroll.el.scrollTop = 38000
-    scroll.el.scrollTop = 13000 * resizeOffsetRatio
+    scroll.el.scrollTop = 14000 * resizeOffsetRatio
   })
 
-//   CONTACT
+//   INQUIRIES
   document.addEventListener("click_link4", () =>{
     console.log("hit link4")
     // scroll.el.scrollTop = 39000
-    scroll.el.scrollTop = 14000 * resizeOffsetRatio
+    scroll.el.scrollTop = 13000 * resizeOffsetRatio
   })
 
 //   ALL PROJECTS
