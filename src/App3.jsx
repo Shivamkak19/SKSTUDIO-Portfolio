@@ -1,3 +1,6 @@
+// ----------------------------------------------------------------------------------------
+// Import Dependencies --------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------
 
 // React Three Fiber Imports 
 import * as THREE from 'three'
@@ -9,8 +12,9 @@ import { useCursor, MeshReflectorMaterial} from '@react-three/drei'
 
 // JSON imports
 import projectContent from "./projectContent.json"
+import galleryContent from "./galleryContent.json"
 import planeMeshProps from "./planeMeshProps.json"
-import animationState from "./animationStateTheatreJS_V7.json"
+import animationState from "./animationStateTheatreJS_V8.json"
 
 
 // Theatre JS imports
@@ -21,23 +25,32 @@ import { ScrollControls, Scroll, useScroll } from "@react-three/drei";
 import { editable as e, SheetProvider, PerspectiveCamera, useCurrentSheet } from '@theatre/r3f'
 
 
-// Initialize Theatre JS studio only in dev mode
-if (import.meta.env.DEV) {
-  studio.initialize()
-  studio.extend(extension)
-}
-
-// Panels import 
-import { Preload, Image as ImageImpl } from '@react-three/drei'
-
-localStorage.clear();
-
 // Vercel Analytics
 import { inject } from '@vercel/analytics';
 inject();
 
 // import Scrollbar from 'smooth-scrollbar';
 // Scrollbar.init(document.querySelector('#root'));
+
+// GALLERY SPOTLIGHT
+import { useDepthBuffer, SpotLight } from '@react-three/drei'
+import { Vector3 } from 'three'
+
+// Panels import 
+import { Preload, Image as ImageImpl } from '@react-three/drei'
+
+
+// ----------------------------------------------------------------------------------------
+// Initialize Global Variables, Events, and resets 
+// ----------------------------------------------------------------------------------------
+
+localStorage.clear();
+
+// Initialize Theatre JS studio only in dev mode
+if (import.meta.env.DEV) {
+  studio.initialize()
+  studio.extend(extension)
+}
 
 // Initialize custom events for clicking on rings in all projects view
 // Store in String-object pairs; access object through JSON-string value
@@ -106,6 +119,12 @@ const DelayedFallback = () => {
   }
 // LAZY FALLBACK --------------------------------------------------
 
+  // Fill project Gallery with JSON content
+  fillGallery(galleryContent)
+
+// ----------------------------------------------------------------------------------------
+// Main app rendered on canvas DOM element
+// ----------------------------------------------------------------------------------------
 
 // Loads All other components into main app for export
 export default function App() {
@@ -123,7 +142,7 @@ export default function App() {
       <Suspense 
       fallback={
         <Html>
-        {/* <!-- Preloader //////////// --> */}
+        {/* <!-- ALTERNATE Preloader //////////// --> */}
             {/* <div className='preloader'>
                 <div className ="preloader-wrapper">
                     <div className ="loading">
@@ -247,7 +266,9 @@ function Intro() {
 
 }
 
-
+// ----------------------------------------------------------------------------------------
+// Main Scene rendered into app
+// ----------------------------------------------------------------------------------------
 function Scene(){
 
     // Trial: Make scroll jump more smooth
@@ -286,7 +307,7 @@ function Scene(){
     console.log("scrollTop value:", scroll.el.scrollTop)
 
     // TOGGLE PROJECT DISPLAY - ENDING SCENE SWITCH
-    if(scroll.el.scrollTop >= 38000){
+    if(scroll.el.scrollTop >= 38000 * resizeOffsetRatio){
         console.log("CODE: 456 - ENTERED PROJECT GALLERY SCROLL")
         document.dispatchEvent(projectGalleryIn);
     }
@@ -333,39 +354,82 @@ function Scene(){
   document.addEventListener("click_link5", () =>{
     console.log("hit link5")
     // scroll.el.scrollTop = 48000
-    scroll.el.scrollTop = 50000 * resizeOffsetRatio
+    scroll.el.scrollTop = 38000 * resizeOffsetRatio
   })
 
 //   RING LINKS
   document.addEventListener("click_ring1", () =>{
     console.log("hit ring1")
     // scroll.el.scrollTop = 4400
-    scroll.el.scrollTop = 22500 * resizeOffsetRatio
+    scroll.el.scrollTop = 17000 * resizeOffsetRatio
   })
 
   document.addEventListener("click_ring2", () =>{
     console.log("hit ring2")
     // scroll.el.scrollTop = 10000
-    scroll.el.scrollTop = 28000 * resizeOffsetRatio
+    scroll.el.scrollTop = 21500 * resizeOffsetRatio
   })
 
   document.addEventListener("click_ring3", () =>{
     console.log("hit ring3")
     // scroll.el.scrollTop = 16000
-    scroll.el.scrollTop = 33000 * resizeOffsetRatio
+    scroll.el.scrollTop = 25000 * resizeOffsetRatio
   })
 
   document.addEventListener("click_ring4", () =>{
     console.log("hit ring4")
     // scroll.el.scrollTop = 21000
-    scroll.el.scrollTop = 38000 * resizeOffsetRatio
+    scroll.el.scrollTop = 29000 * resizeOffsetRatio
   })
 
   document.addEventListener("click_ring5", () =>{
     console.log("hit ring5")
     // scroll.el.scrollTop = 27000
-    scroll.el.scrollTop = 42000 * resizeOffsetRatio
+    scroll.el.scrollTop = 32000 * resizeOffsetRatio
   })
+
+// Normal Plane clicks
+
+document.addEventListener("click_plane6", () =>{
+  console.log("hit plane1")
+  // scroll.el.scrollTop = 27000
+  scroll.el.scrollTop = 7800 * resizeOffsetRatio
+})
+document.addEventListener("click_plane7", () =>{
+  console.log("hit plane2")
+  // scroll.el.scrollTop = 27000
+  scroll.el.scrollTop = 13000 * resizeOffsetRatio
+})
+document.addEventListener("click_plane8", () =>{
+  console.log("hit plane3")
+  // scroll.el.scrollTop = 27000
+  scroll.el.scrollTop = 14000 * resizeOffsetRatio
+})
+document.addEventListener("click_plane1", () =>{
+  console.log("hit plane4")
+  // scroll.el.scrollTop = 27000
+  scroll.el.scrollTop = 17000 * resizeOffsetRatio
+})
+document.addEventListener("click_plane2", () =>{
+  console.log("hit plane5")
+  // scroll.el.scrollTop = 27000
+  scroll.el.scrollTop = 21500 * resizeOffsetRatio
+})
+document.addEventListener("click_plane3", () =>{
+  console.log("hit plane6")
+  // scroll.el.scrollTop = 27000
+  scroll.el.scrollTop = 25000 * resizeOffsetRatio
+})
+document.addEventListener("click_plane4", () =>{
+  console.log("hit plane7")
+  // scroll.el.scrollTop = 27000
+  scroll.el.scrollTop = 29000 * resizeOffsetRatio
+})
+document.addEventListener("click_plane5", () =>{
+  console.log("hit plane8")
+  // scroll.el.scrollTop = 27000
+  scroll.el.scrollTop = 32000 * resizeOffsetRatio
+})
 
 //   Project Gallery Toggles
   document.addEventListener("gallery_in", () =>{
@@ -388,6 +452,9 @@ function Scene(){
     sheet.sequence.position = scroll.offset * sequenceLength;
   });
 
+  const depthBuffer = useDepthBuffer({ frames: 1 })
+
+
 
   return(
     <>
@@ -400,6 +467,9 @@ function Scene(){
         // near={0.1}
         // far={70}
       />
+
+      <MovingSpot depthBuffer={depthBuffer} color="#FFFFFF" position={[3, 3, 2]} />
+      <MovingSpot depthBuffer={depthBuffer} color="#47139f" position={[1, 3, 0]} />
 
       <color attach="background" args={['black']} />
       <fog attach="fog" args={['black', 15, 20]} />
@@ -504,6 +574,7 @@ function setText(props, plane_props) {
   return (
     <Html
       transform
+      className= 'noPointer'
       wrapperClass="htmlScreen"
       distanceFactor={ 0 }
       position={ plane_props.plane_position }
@@ -808,3 +879,88 @@ function Image(props) {
 
 
 // PANELS FUNCTIONS ------------------------------------------------------------------------------
+
+// GALLERY SPOTLIGHT __________________________________________________________
+
+function MovingSpot({ vec = new Vector3(), ...props }) {
+  const light = useRef()
+  const viewport = useThree((state) => state.viewport)
+  useFrame((state) => {
+    light.current.target.position.lerp(vec.set((state.mouse.x * viewport.width) / 4, (state.mouse.y * viewport.height) / 4, 0), 0.1)
+    light.current.target.updateMatrixWorld()
+  })
+  return <SpotLight castShadow ref={light} penumbra={1} distance={6} angle={0.35} attenuation={5} anglePower={4} intensity={2} {...props} />
+}
+
+
+
+
+// GALLERY SPOTLIGHT __________________________________________________________
+
+// PROJECT GALLERY TEMPLATE __________________________________________________
+
+var counter = 0; 
+
+function fillProject(project) {
+  counter++;
+  const template = document.querySelector(".sectionTemplate");
+  const newProject = template.cloneNode(true);
+  newProject.classList.remove("hidden");
+
+  // Update content Dynamically ---------------------------------
+  
+  const image = newProject.firstElementChild.firstElementChild;
+  const title = newProject.lastElementChild.firstElementChild.firstElementChild;
+  const git = newProject.lastElementChild.firstElementChild.lastElementChild;
+  const bodyGallery = newProject.lastElementChild.lastElementChild;
+
+  const description = bodyGallery.firstElementChild;
+  const bubbles = bodyGallery.lastElementChild;
+
+
+  image.src = project.logo_image;
+  image.alt = project.logo_alt;
+
+  // Add GitHub logo dynamically
+  git.href = project.github_link;
+
+  console.log("HIIII")
+  console.log(newProject)
+
+  title.innerHTML = `${project.title}`;
+  description.innerHTML = `<p> ${project.text1} </p>`;
+
+  // Clear existing bubbles
+  while (bubbles.firstChild) {
+    bubbles.removeChild(bubbles.firstChild);
+  }
+
+  // Create and append new bubbles
+  for (const badge of project.badges) {
+    const bubble = document.createElement("div");
+    bubble.className = "bubble";
+    bubble.innerHTML = `<p>${badge.name}</p>`;
+    bubbles.appendChild(bubble);
+  }
+
+  // Update content Dynamically ---------------------------------
+
+  const heroParent = document.querySelector(".hero-wrapper");
+  heroParent.appendChild(newProject);
+}
+
+function fillGallery(project_props){
+
+  console.log(project_props)
+  for (const project in project_props){
+
+    if(project_props.hasOwnProperty(project)){
+      // console.log(`${project} : ${project_props[project]}`)
+      // console.log("yooo in")
+
+      fillProject(project_props[project])
+    }
+  }
+}
+
+// PROJECT GALLERY TEMPLATE __________________________________________________
