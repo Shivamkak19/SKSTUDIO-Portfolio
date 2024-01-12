@@ -309,7 +309,10 @@ function Scene(){
     // TOGGLE PROJECT DISPLAY - ENDING SCENE SWITCH
     if(scroll.el.scrollTop >= 38000 * resizeOffsetRatio){
         console.log("CODE: 456 - ENTERED PROJECT GALLERY SCROLL")
-        document.dispatchEvent(projectGalleryIn);
+        // document.dispatchEvent(projectGalleryIn);
+
+        document.dispatchEvent(projectGalleryOut);
+
     }
     else{
         console.log("CODE: 123 - MAIN SCENE SCROLL")
@@ -354,7 +357,8 @@ function Scene(){
   document.addEventListener("click_link5", () =>{
     console.log("hit link5")
     // scroll.el.scrollTop = 48000
-    scroll.el.scrollTop = 38000 * resizeOffsetRatio
+    // scroll.el.scrollTop = 38000 * resizeOffsetRatio
+    scroll.el.scrollTop = 36000 * resizeOffsetRatio
   })
 
 //   RING LINKS
